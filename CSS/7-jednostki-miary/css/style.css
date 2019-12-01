@@ -1,0 +1,32 @@
+div{
+    height: 50px;
+}
+
+#pixels{
+    width: 400px;
+    background-color: hotpink;
+}
+
+#container{
+    font-size: 20px;
+    width: 70%;
+}
+
+#container > div {
+    margin-bottom: 15px;
+
+}
+#em{
+    width: 20em;
+    background-color: olivedrab;
+}
+#percent{
+    width: 50%;
+    background-color: orange;
+
+}
+
+#vh{
+    width: 60vh;
+    background-color: orangered;
+}
