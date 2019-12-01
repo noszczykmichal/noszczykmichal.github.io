@@ -1,0 +1,37 @@
+*{
+    color: green
+}
+
+p{
+    color: pink;
+}
+
+#kasia{
+    background-color: violet;
+}
+
+.lorak{
+    color: blue;
+}
+
+div.lorak{
+    color: red;
+}
+
+a > span{
+    background-color: orange;
+}
+
+ul a {
+    text-decoration: none;
+    color: brown
+}
+
+li#pierwszy~li{
+    background-color: turquoise;
+}
+
+li#pierwszy + li{
+    background-color: yellow;
+}
+
