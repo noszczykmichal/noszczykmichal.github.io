@@ -1,0 +1,18 @@
+img{
+    width: auto;
+    height: 450px ;
+}
+
+#strawberry{
+    float: left;
+}
+
+#strawberry2{
+    float: right;
+}
+
+p:last-child {
+background-color: turquoise;
+clear: both;
+
+}
