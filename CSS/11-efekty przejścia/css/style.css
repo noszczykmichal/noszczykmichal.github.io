@@ -1,0 +1,45 @@
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 40px
+
+
+
+}
+
+#colors{
+    transition: background-color 1.5s linear 0.5s;
+    background-color: darkslateblue;
+}
+
+#colors:hover{
+    background-color: yellow;
+}
+
+#box1{
+    transition: width 1.5s ;
+    background-color: fuchsia;
+}
+
+#box1:hover{
+    width: 300px;
+}
+
+#box2{
+    transition: height 1.5s;
+    background-color: orange;
+}
+
+#box2:hover{
+    height: 400px
+}
+
+#box3{
+    transition: height 1.5s; width 2s;
+    background-color: tomato;
+}
+
+#box3:hover{
+    height: 100px;
+    width: 100px;
+}
