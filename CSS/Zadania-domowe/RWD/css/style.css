@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: auto;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header{
+    height: 100vh;
+    width: auto;
+    background-image: url(../img/man-1.jpg);
+    background-size: cover;
+      
+}
+
+.claim {
+    display: flex;
+    align-content: space-around;
+    justify-content: left;
+    
+}
+
+.claim h1{
+    font-size: 3em;
+    margin-bottom: 2em;
+
+}
+
+.claim p{
+    font-size: 4em;
+    font-weight: 600;
+
+}
