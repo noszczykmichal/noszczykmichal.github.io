@@ -1,37 +1,90 @@
 *{
     box-sizing: border-box;
-    margin: auto;
 }
 
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
     color: #fff;
     text-transform: uppercase;
+    margin: auto;
 }
 
 header{
     height: 100vh;
-    width: auto;
+    width: 100vw;
+    font-size: 10px;
     background-image: url(../img/man-1.jpg);
     background-size: cover;
-      
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .claim {
-    display: flex;
-    align-items: center;
-    
+    height: 50%;
+    width: auto;
+    padding: 10rem 5rem;  
 }
 
 .claim h1{
-    font-size: 3em;
-    margin-bottom: 2em;
-
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .claim p{
-    font-size: 4em;
+    font-size: 3rem;
     font-weight: 600;
+}
 
+@media(min-width:992px) and (max-width:1170px){
+    header{
+        height: 70vh;
+        width: 100vw;
+        background-image: url(../img/man-2.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: flex-end;
+        text-align: left;
+    }
+
+    .claim{
+        height: 70vh;
+        width: auto;   
+    }
+
+    .claim h1{
+        font-size: 2rem;
+    }
+
+    .claim p{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 991px){
+    body{
+        color: black;
+    }
+    header{
+        height: 50vh;
+        width: auto;
+        background-image: url(../img/man-1.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+    .claim{
+        margin-top: 30rem;
+    }
+  
+    .claim h1{
+        font-size: 1em;
+    }
+
+    .claim p{
+        font-size: 2em;
+    }
 }
