@@ -83,6 +83,8 @@
 /*==========  1.1 - @import(s)  ==========*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Archivo+Black&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
 /***/
 /*==========  1.2 - Fonts  ==========*/
 /***/
@@ -8559,13 +8561,13 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: #5b5b5b;
-  font-family: "Lato Regular", Helvetica, sans-serif; }
+  font-family: "Raleway", sans-serif; }
   body a, body input, body p {
-    font-family: "Lato Regular", Helvetica, sans-serif; }
+    font-family: "Raleway", sans-serif; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     text-transform: uppercase;
     color: #222222;
-    font-family: "Lato Bold", Helvetica, sans-serif;
+    font-family: "Archivo Black", sans-serif;
     margin-bottom: 24px;
     margin-top: 24px; }
   body h1 {
@@ -8766,7 +8768,7 @@ header.header-image {
       font-weight: 700;
       text-transform: uppercase;
       background-color: #ffffff;
-      font-family: "Lato Regular", Helvetica, sans-serif;
+      font-family: "Raleway", sans-serif;
       margin-left: 10px;
       padding-bottom: 10px;
       padding-top: 10px; }
@@ -8782,7 +8784,7 @@ header.header-image {
         font-size: 13px;
         font-weight: 700;
         text-transform: uppercase;
-        font-family: "Lato Regular", Helvetica, sans-serif; }
+        font-family: "Raleway", sans-serif; }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
       background-color: #ffffff;
       color: #979797; }
@@ -8853,7 +8855,7 @@ header.header-image {
         font-weight: 700;
         text-transform: uppercase;
         background-color: #ffffff;
-        font-family: "Lato Regular", Helvetica, sans-serif;
+        font-family: "Raleway", sans-serif;
         padding-top: 16px;
         padding-bottom: 16px;
         margin-left: 0; }
@@ -8867,7 +8869,7 @@ header.header-image {
           font-size: 13px;
           font-weight: 700;
           text-transform: uppercase;
-          font-family: "Lato Regular", Helvetica, sans-serif; }
+          font-family: "Raleway", sans-serif; }
       .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         background-color: #ffffff;
         color: #5b5b5b; }
@@ -8901,7 +8903,7 @@ header.header-image {
         font-size: 13px;
         font-weight: 700;
         text-transform: uppercase;
-        font-family: "Lato Regular", Helvetica, sans-serif; }
+        font-family: "Raleway", sans-serif; }
     .navbar-default.affix .open .dropdown-menu > li > a:hover, .navbar-default.affix .open .dropdown-menu > li > a:focus {
       background-color: #ffffff;
       color: #979797; }
@@ -8981,7 +8983,7 @@ header.header-image {
     width: 40px;
     height: 40px;
     font-size: 32px;
-    font-family: "Lato Regular", Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
     line-height: 35.2px;
     margin: 0;
     z-index: 11; }
@@ -9360,7 +9362,7 @@ form fieldset {
   margin-right: auto; }
   .t108-page time {
     font-size: 20px;
-    font-family: "Lato Bold", Helvetica, sans-serif;
+    font-family: "Archivo Black", sans-serif;
     color: #222222;
     text-transform: uppercase; }
   .t108-page figure {
