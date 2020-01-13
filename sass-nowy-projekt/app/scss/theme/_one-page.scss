@@ -167,7 +167,7 @@
     }
 
     #counters-services {
-    background-color: $color-background;
+    background-color: $color-bg-custom-services-team;
     padding: ($baseline * 4) $padding-none $baseline;
 
         .icon-services {
@@ -239,6 +239,11 @@
 
         .container {
             margin-top: $baseline * 3;
+            .row{
+                .col-lg-12{
+                    background-color: $color-bg-custom-services-team;
+                }
+            }
 
             img {
                 margin-left: auto;
