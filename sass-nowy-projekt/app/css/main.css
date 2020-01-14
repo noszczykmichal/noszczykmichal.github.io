@@ -9019,8 +9019,8 @@ header.header-image {
       font-size: 20px;
       margin-bottom: 24px; }
     #main-slider .carousel-caption .btn-primary {
-      margin-top: 48px;
-      font-size: 14px;
+      margin-bottom: 24px;
+      font-size: 26px;
       padding: 10px 12px; }
   #main-slider .icon-prev, #main-slider .icon-next {
     top: 45%; }
@@ -9427,8 +9427,8 @@ form fieldset {
       margin-bottom: 0; }
     .t108-one-page #about .about-box .icon-about {
       color: #ffffff;
-      width: 72px;
-      height: 72px;
+      width: 96px;
+      height: 96px;
       border-radius: 100%;
       line-height: 72px;
       background-color: #a5e200;
