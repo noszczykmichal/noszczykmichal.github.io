@@ -1,0 +1,20 @@
+input {
+    margin-top: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  
+  input:focus {
+    border-bottom: 1px solid blue;
+  }
+  button#main-btn {
+    margin-top: 2rem;
+  }
+  .error {
+    color:red;
+    display:none;
+  }
+  .inputError {
+    color:red;
+    display:none;
+  }

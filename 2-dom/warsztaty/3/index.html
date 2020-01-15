@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+  <input type="text" placeholder="Imię">
+  <span class = "inputError">Brak imienia</span>
+  <br>
+  <input type="text" placeholder="Nazwisko">
+   <span class = "inputError">Brak nazwiska</span>
+    <br>
+  <input type="text" placeholder="email">
+     <span class = "inputError">Brak emiala</span>
+    <br>
+   Zgody marketingowe: <input type="checkbox" id= "zgody">
+    <br>
+    <p class = "error">Brak zgody</p>
+    Zgody na kontak:
+  <input type="checkbox" onchange ="resztaChecbox()" class ="zgoda">
+    <br>
+    Zgoda na przetwarzanie
+  <input type="checkbox"  onchange ="resztaChecbox()" class ="zgoda">
+  
+    <br>
+<button id ='main-btn'>Wyślij</button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
