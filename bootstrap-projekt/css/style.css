@@ -7,6 +7,10 @@
     width: 300px;
 }
 
+.icon{
+    padding: 1rem;
+}
+
 .fab{
     height: 60px;
     width: 60px;
