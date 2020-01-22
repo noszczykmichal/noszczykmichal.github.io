@@ -11,9 +11,16 @@ function wynagrodzenie(){
 for(let i =0; i<inputCzas.length; i++){
     //weryfikacja działania pętli
     // console.log(`Index elementu: ${i} + wartość elementu + ${inputCzas[i].value}`);   
-    
-    let wysokoscWyplaty= inputCzas[i].value*inputStawka[i].value
-    spanWyplata[i].innerText=wysokoscWyplaty;
+    if(inputCzas[i].value>160){
+        // wylicznie wynagrodzenia i premi dla pracowników powyżej 160 godzin
+        let premia=(inputCzas[i].value-160)*(inputStawka[i].value*2);
+        let wyplataBaza= 160*inputStawka[i].value;
+        let wyplataPlusPremia= premia+wyplataBaza;
+        spanWyplata[i].innerText=wyplataPlusPremia;
+    }else{
+        let wysokoscWyplaty= inputCzas[i].value*inputStawka[i].value
+        spanWyplata[i].innerText=wysokoscWyplaty;
+    }
        
     }
     
