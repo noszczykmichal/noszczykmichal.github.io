@@ -1,17 +1,27 @@
-//pobranie inputów oraz spanów ze strony
-let inputCzas= document.getElementsByClassName('czas');
-let inputStawka=document.getElementsByClassName('stawka');
-let spanWyplata=document.getElementsByClassName('wyplata');
-let spanPracownik=document.getElementsByClassName('pracownik');
 // tablica ze wszystkimi wartościami przepracowanych godzin
 let arrayCzas=[];
 //tablica z trzem największymi wartościami
 let trzyNajwieksze=[];
 
-//weryfikacja poprawności pobrania elementów
-// console.log(inputCzas);
+//'łapię przycisk do późniejszczego dodania addEventListener'a
+let btn=document.getElementById('oblicz');
+
+//'łapię' spana i tworze w nim listę numerowaną do której w pętli będę tworzył dynamicznie elementy
+            let spanNajlepsi=document.getElementById('najlepsi-pracownicy');
+            let olNajlepsi=document.createElement('ol');
+            spanNajlepsi.append(olNajlepsi);
+
 
 function wynagrodzenie(){
+
+    //pobranie inputów oraz spanów ze strony
+    let inputCzas= document.getElementsByClassName('czas');
+    let inputStawka=document.getElementsByClassName('stawka');
+    let spanWyplata=document.getElementsByClassName('wyplata');
+    let spanPracownik=document.getElementsByClassName('pracownik');
+
+    //weryfikacja poprawności pobrania elementów
+    // console.log("TCL: wynagrodzenie -> inputCzas", inputCzas)
 
     // pierwsza pętla
 
@@ -31,7 +41,7 @@ for(let i=0; i<inputCzas.length; i++){
    
     // //weryfikacja pracowników którzy przepracowali poniżej 100 godzin
     if(inputCzas[i].value<100){
-        spanPracownik[i].setAttribute('class', 'red');
+        spanPracownik[i].classList.add('red');
     }
     };
 
@@ -65,6 +75,12 @@ for(let i=0; i<inputCzas.length; i++){
           let argumentTrzyNajwieksze=trzyNajwieksze[j];
           if(wartoscInputCzas == argumentTrzyNajwieksze){
             console.log(spanPracownik[i].innerText)
+
+            let olCatch=document.querySelector('ol');
+            let liNajlepsi=document.createElement('li');
+            liNajlepsi.innerText=`${spanPracownik[i].innerText} przepracował/a ${inputCzas[i].value}`;
+            olCatch.append(liNajlepsi);
+
           }
         }
       };
@@ -74,5 +90,4 @@ for(let i=0; i<inputCzas.length; i++){
 }
 
 
-wynagrodzenie();
-
+btn.addEventListener('click', wynagrodzenie);
