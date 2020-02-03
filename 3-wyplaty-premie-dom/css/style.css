@@ -2,14 +2,15 @@
     background-color: red;
 }
 
+.header{
+    text-align: center;
+}
+
 div[id^="pracownik"], div[id="title"]{
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+    display: flex;
 }
 
 span[class^="pracownik"], span[class="wyplata"],span[id^="tytul"], input[type="number"]{
-    display: table-cell;
     text-align: center;
     border: 1px solid gray;
     width: 25%;
