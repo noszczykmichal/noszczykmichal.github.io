@@ -1,12 +1,25 @@
-form{
-    background-color: rgb(14, 71, 145);
-    padding: 20px;
-    color: rgb(192, 192, 192);
-    width: 600px;
+*{
+    box-sizing: border-box;
+    margin: 0;
 }
 
-h1{
-    font-size: 18px;
+.glowna{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+
+.formularz{
+    height: 100vh;
+    width: 600px;
+    background-color: rgb(14, 71, 145);
+    padding: 25px;
+    color: rgb(192, 192, 192); 
+}
+
+.naglowek{
+    font-size: 23px;
+    margin-bottom: 20px;
 }
 
 form input, form select{
@@ -21,11 +34,12 @@ form input, form select, form textarea{
     background-color: rgb(11, 100, 112);
 }
 
-form input[type="submit"]{
+.submit{
     margin-top: 20px;
     height: 25px;
     width: 100px;
     background-color: rgb(154, 205, 50);
+    border-color: rgb(154, 205, 50);
 }
 
 form input:focus, form input:focus, form select:focus, form textarea:focus{
@@ -33,3 +47,8 @@ form input:focus, form input:focus, form select:focus, form textarea:focus{
     border: 3px solid rgb(139, 0, 139);
 }
 
+
+.submit:hover{
+    background-color: rgb(255, 7, 67);
+    border-color: rgb(255, 7, 67);
+}
