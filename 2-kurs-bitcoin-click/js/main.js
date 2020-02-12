@@ -1,6 +1,15 @@
 $(function () {
   let kursPoczatkowyKupno=null;
   let kursPoczatkowySprzedaz=null;
+  $('.btn').css({
+    'height':'40px',
+    'width': '200px',
+    'display': 'block',
+    'margin-top':'50px',
+    'background-color': 'rgb(59, 235, 115)',
+    'border-color': 'rgba(30, 120, 42, 0.47)',
+    'color':'#fff'
+  })
   $.getJSON('https://blockchain.info/pl/ticker', function (result) {
     // console.log(result)
 
