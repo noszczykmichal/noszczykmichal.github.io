@@ -1,0 +1,33 @@
+div[id="title"], div[id^="uczen"]{
+    display: flex;
+}
+
+.header{
+    text-align: center;
+}
+
+span[class^="tytul"], input[type="number"], span[class="uczen"], span[class="srednia"], input[type="text"]{
+    text-align: center;
+    border: 1px solid gray;
+    width: 25%;
+}
+
+span[class^="tytul"]{
+    background-color: #3B9CFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+#oblicz{
+    margin-top: 40px;
+    width: 100px;
+    height: 25px;
+    border-radius: 2px;
+    background-color: #9EA0A1;
+}
+
+#oblicz:hover{
+    background-color: #CC2535;
+    font-weight: 700;
+}
