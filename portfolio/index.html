@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michał Noszczyk | Front-end Developer</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Google Fonts: Titillium Web -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap&subset=latin-ext">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0815da65e4.js" crossorigin="anonymous"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-content">
+            <h1>Front-end Developer</h1>
+            <hr>
+            <p><span>HTML5 </span>&#9830;<span> CSS3 </span>&#9830;<span> JavaScript</span></p>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <label for="drop-nav">Menu</label>
+        <input type="checkbox" id="drop-nav">
+        <ul class="nav-menu">
+            <li class="nav-menu-item"><a href="#about">O MNIE</a></li>
+            <li class="nav-menu-item"><a href="#education">WYKSZTAŁCENIE</a></li>
+            <li class="nav-menu-item"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="nav-menu-item"><a href="#contact">KONTAKT</a></li>
+        </ul>
+    </nav>
+    <section class="section about" id="about">
+        <div class="container">
+            <header>
+                <h2>O mnie</h2>
+                <hr>
+            </header>
+            <img src="img/about-me.jpg" class="about-me-image" alt="Michał Noszczyk">
+            <p class="textAbout">Nazywam się Michał Noszczyk i jestem absolwentem anglistyki i ekonomii. Od zawsze
+                interesowałem się
+                programowaniem i nowymi technologiami. Rok temu podjąłem decyzję, że chcę przekuć dotychczasowe
+                zainteresowanie w pracę. Naukę zacząłem<br>we własnym zakresie, a nie dawno ukończyłem szkołę
+                programowania,
+                która pozwoliła mi usystematyzować<br>dotychczasową wiedzę i umiejętności.</p>
+            <p class="textAbout">Każdą wolną chwilę poświecam na poszerzanie swojej wiedzy i tworzę nowe
+                projekty.<br>Jeśli chcesz się ze mną
+                skontaktować zapraszam do sekcji "Kontakt".<br>Poniżej również moje przykładowe projekty.</p>
+            <div class="myskills">
+                <h3 class="headerSkills">Umiejętności Miękkie</h3>
+                <p class="display soft">najedź na ikonę</p>
+                <div class="containerSkills contSoft">
+                    <i class="fas fa-users" title="Lubię pracę w zespole"></i>
+                    <i class="far fa-comments" title="Sprawnie komunikuję się z ludźmi"></i>
+                    <i class="fas fa-tasks" title="Umię zarządzać czasem i radzę sobie pod presją czasu"></i>
+                    <i class="fas fa-user-graduate" title="Chętnie uczę się nowych rzeczy"></i>
+                </div>
+                <h3 class="headerSkills">Umiejętności Twarde</h3>
+                <p class="display hard">najedź na ikonę</p>
+                <div class="containerSkills contHard">
+                    <i class="fab fa-html5" title="Posiadam wiedzę z zakresu html5"></i>
+                    <i class="fab fa-css3" title="Dobrze znam CSS"></i>
+                    <i class="fab fa-js" title="Chętnie programuję w JavaScript"></i>
+                    <i class="fab fa-git-square" title="Chętnie korzystam z systemu kontroli wersji Git"></i>
+                    <i class="fab fa-bootstrap" title="Potrafię korzystać z biblioteki Bootstrap"></i>
+                    <i class="fab fa-sass" title="Potrafię korzystać ze zmiennych,mixins i innych możliwości Sass"></i>
+                    <i class="fab fa-react" title="Rozwijam swoje umiejętności w programowaniu w React"></i>
+                </div>
+            </div>
+            <a href="https://www.linkedin.com/in/micha%C5%82-noszczyk/" class="btn" target="_blank">Linkedin</a>
+        </div>
+    </section>
+
+    <section class="section" id="education">
+        <div class="container">
+            <header>
+                <h2>Wykształcenie</h2>
+                <hr>
+            </header>
+            <div class="main">
+                <h3 class="headerAccordion">Akademia 108<span> &#8901; </span>Szkoła programowania<span> &#8901;
+                    </span>Warszawa
+                </h3>
+                <p class="panelEducation">Poznane technologie: GIT, HTML5, CSS3, JavaScript, SASS, GULP, React,
+                    Bootstrap.
+                </p>
+
+                <h3 class="headerAccordion">Uniwersytet Marii Curie-Skłodowskiej<span> &#8901; </span>Lublin</h3>
+                <p class="panelEducation">Licencjat z Ekonomii-specjalizacja: Przedsiębiorstwo w gospodarce rynkowej.
+                </p>
+
+                <h3 class="headerAccordion">Uniwersytet Marii Curie-Skłodowskiej<span> &#8901; </span>Lublin</h3>
+                <p class="panelEducation">Studia magisterskie uzupełniające z Filologii Angielskiej-specjalizacja:
+                    Literatura angielska.</p>
+
+                <h3 class="headerAccordion">Nauczycielskie Kolegium Języków Obcych<span> &#8901; </span>Lublin</h3>
+                <p class="panelEducation">Licencjat z Filologii Angielskiej-specjalizacja: Literatura angielska.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <header>
+                <h2>Portfolio</h2>
+                <hr>
+            </header>
+            <div class="portfolio-wrapper">
+                <div class="portfolio-item">
+                    <img src="img/portfolio/to-do-list.jpg" alt="Lista rzeczy do zrobienia">
+                    <div class="project">
+                        <h3>Lista rzeczy do zrobienia</h3>
+                        <p>Projekt umożliwiający stworzenie "listy zadań do zrobienia".</p>
+                        <p>Zastosowane technologie:</p>
+                        <div class="projectIcons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="contLinks">
+                            <a href="" class="link code" target="_blank">Code</a>
+                            <a href="" class="link live" target="_blank">Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="img/portfolio/meter.jpg" alt="Pesel generator">
+                    <div class="project">
+                        <h3>Pesel generator</h3>
+                        <p>Projekt umożliwia wygenerowanie przykładowego numeru Pesel. Numer generowany jest zgodnie z informacjami dostępnymi na stronie rządowej.</p>
+                        <p>Zastosowane technologie:</p>
+                        <div class="projectIcons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="contLinks">
+                            <a href="" class="link code" target="_blank">Code</a>
+                            <a href="" class="link live" target="_blank">Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="img/portfolio/calculator.jpg" alt="Kalkulator">
+                    <div class="project">
+                        <h3>Kalkulator</h3>
+                        <p>Kalkulator umożliwiający wykonanie prostych obliczeń matematycznych.</p>
+                        <p>Zastosowane technologie:</p>
+                        <div class="projectIcons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="contLinks">
+                            <a href="" class="link code" target="_blank">Code</a>
+                            <a href="" class="link live" target="_blank">Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="img/portfolio/bitcoin.jpg" alt="Kurs bitcoin'a">
+                    <div class="project">
+                        <h3>Kurs bitcoin'a</h3>
+                        <p>Prosty projekt pobierający dane z API i pokazujący aktualny kurs kryptowaluty<br>Bitcoin do PLN.</p>
+                        <p>Zastosowane technologie:</p>
+                        <div class="projectIcons">
+                            <i class="fab fa-html5"></i>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="contLinks">
+                            <a href="" class="link code" target="_blank">Code</a>
+                            <a href="" class="link live" target="_blank">Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="img/portfolio/payout-list.jpg" alt="Lista wypłat i premii">
+                    <div class="project">
+                        <h3>Lista wypłat i premii</h3>
+                        <p>Prosty projekt liczący wypłaty dla pracowników.</p>
+                        <p>Zastosowane technologie:</p>
+                        <div class="projectIcons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="contLinks">
+                            <a href="" class="link code" target="_blank">Code</a>
+                            <a href="" class="link live" target="_blank">Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="img/portfolio/member.jpg" alt="Formularz rejestracji">
+                    <div class="project">
+                        <h3>Formularz rejestracji</h3>
+                        <p>Formularz umożliwiący zapisanie się na kurs</p>
+                        <p>Zastosowane technologie:</p>
+                        <div class="projectIcons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3"></i>
+                        </div>
+                        <div class="contLinks">
+                            <a href="" class="link code" target="_blank">Code</a>
+                            <a href="" class="link live" target="_blank">Live</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <header>
+                <h2>Kontakt</h2>
+                <hr>
+            </header>
+            <form action="https://formspree.io/mgezwbwj" method="post">
+                <input type="text" name="name" id="name" placeholder="Imię" required>
+                <input type="text" name="lastname" id="lastname" placeholder="Nazwisko" required>
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <input type="tel" name="tel" id="tel" placeholder="Telefon: xxx-xxx-xxx"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+                <textarea name="message" id="message" placeholder="Wpisz wiadomość"></textarea>
+                <input type="submit" class="btn" value="Wyślij">
+            </form>
+            <div class="containerIcons">
+                <a href="https://github.com/noszczykmichal" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micha%C5%82-noszczyk/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>Copyright <span>&#169;</span> MNUF 2020</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
