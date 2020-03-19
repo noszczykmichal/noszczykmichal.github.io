@@ -357,8 +357,17 @@ footer{
     .main-content h1{
         font-size: 1.5em;
     }
+
+    .main-nav .nav-menu .nav-menu-item a{
+        padding: 14px 10px;
+    }
+
     .container{
         max-width: 95%;
+    }
+
+    .myskills .containerSkills i{
+        font-size: 2.5em;
     }
 
     .portfolio .portfolio-wrapper .portfolio-item{
@@ -368,7 +377,7 @@ footer{
 
 @media(max-width: 480px){
     
-    .main-content h1{
+    .main-header h1{
         font-size: 1.5em;
     }
     
@@ -403,6 +412,10 @@ footer{
         max-height: 200px;
         max-width: 200px;
         border-radius: 50%;
+    }
+
+    .myskills .containerSkills i{
+        font-size: 1.5em;
     }
 
     .contact form input:not([type="submit"]){
