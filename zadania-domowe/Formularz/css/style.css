@@ -1,25 +1,26 @@
 *{
     box-sizing: border-box;
+}
+body{
     margin: 0;
 }
 
-.glowna{
-    height: 100vh;
-    width: 100vw;
+.main{
     background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 }
 
-.formularz{
-    height: 100vh;
-    width: 600px;
+.container{
+    box-sizing: border-box;
+    position: relative;
+    width:600px;
     background-color: rgb(14, 71, 145);
-    padding: 25px;
+    padding: 2px 0px 10px 25px;
     color: rgb(192, 192, 192); 
 }
 
-.naglowek{
-    font-size: 23px;
-    margin-bottom: 20px;
+.formHeader{
+    font-size: 1.5em;
+    margin-bottom: 15px;
 }
 
 form input, form select{
@@ -52,3 +53,12 @@ form input:focus, form input:focus, form select:focus, form textarea:focus{
     background-color: rgb(255, 7, 67);
     border-color: rgb(255, 7, 67);
 }
+
+.containerUnfilled{
+    position: absolute;
+    height: 50vh;
+    width: 200px;
+    right: 0;
+    top: 50px;
+}
+

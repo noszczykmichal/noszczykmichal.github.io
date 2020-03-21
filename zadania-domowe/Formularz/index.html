@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -8,49 +8,58 @@
     <title>Formularz</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<section class="main">
+        <div class="container">
+            <form action="https://formspree.io/mqkadaag" method="POST">
+                <h1 class="formHeader">Zapraszamy na kurs-poniżej wpisz swoje dane:</h1>
+                <label for="name">Imię:</label>
+                <input type="text" name="name" id="name" required><br>
 
-<body>
-    <section class="glowna">
-        <form action="https://formspree.io/mqkadaag" method="POST" class="formularz">
-            <h1 class="naglowek">Zapraszamy na kurs-poniżej wpisz swoje dane:</h1>
-            <label for="name">Imię:</label>
-            <input type="text" name="name" id="name" required><br>
+                <label for="lastname">Nazwisko:</label>
+                <input type="text" name="lastname" id="lastname" required><br>
 
-            <label for="lastname">Nazwisko:</label>
-            <input type="text" name="lastname" id="lastname" required><br>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email"><br>
 
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email"><br>
+                <label for="phone">Telefon:</label>
+                <input type="text" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                    placeholder="xxx-xxx-xxx" required><br>
 
-            <label for="phone">Telefon:</label>
-            <input type="text" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="xxx-xxx-xxx"
-                required><br>
+                <label for="city">Wybierz swoje miasto</label>
+                <select name="city" id="city">
+                    <option value="krakow">Kraków</option>
+                    <option value="warszawa">Warszawa</option>
+                    <option value="gdansk">Gdańsk</option>
+                </select><br>
 
-            <label for="city">Wybierz swoje miasto</label>
-            <select name="city" id="city">
-                <option value="krakow">Kraków</option>
-                <option value="warszawa">Warszawa</option>
-                <option value="gdansk">Gdańsk</option>
-            </select><br>
+                <p>Wybierz płeć:</p>
+                <label for="male"><input type="radio" name="gender" id="male" value="male"
+                        checked="true">Mężczyzna</label>
+                <label for="female"><input type="radio" name="gender" id="female" value="female">Kobieta</label><br>
 
-            <p>Wybierz płeć:</p>
-            <label for="male"><input type="radio" name="gender" id="male" value="male" checked="true">Mężczyzna</label>
-            <label for="female"><input type="radio" name="gender" id="female" value="female">Kobieta</label><br>
+                <label for="agreement"><input type="checkbox" name="agreement" id="agreement">Wyrażam zgodę na
+                    otrzymywanie
+                    od Fajne zadania Sp. z o.o. drogą elektroniczną na wskazany przeze mnie w Formularzu adres e-mail
+                    informacji handlowych, dotyczących produktów i usług oferowanych przez Fajne zadania Sp. z o.o. w
+                    rozumieniu ustawy o świadczeniu usług drogą elektroniczną z dnia 18 lipca 2002 r. (Dz. U z 2013 r.,
+                    poz.
+                    1422 ze zm.)</label>
+                <br>
 
-            <label for="agreement"><input type="checkbox" name="agreement" id="agreement">Wyrażam zgodę na otrzymywanie
-                od Fajne zadania Sp. z o.o. drogą elektroniczną na wskazany przeze mnie w Formularzu adres e-mail
-                informacji handlowych, dotyczących produktów i usług oferowanych przez Fajne zadania Sp. z o.o. w
-                rozumieniu ustawy o świadczeniu usług drogą elektroniczną z dnia 18 lipca 2002 r. (Dz. U z 2013 r., poz.
-                1422 ze zm.)</label>
-            <br>
+                <label for="message">Wiadomość:</label>
+                <textarea rows="5" cols="30" name="message" maxlength="150" id="message"
+                    placeholder="Wpisz wiadomość"></textarea><br>
 
-            <label for="message">Wiadomość:</label>
-            <textarea rows="5" cols="30" name="message" maxlength="150" id="message"
-                placeholder="Wpisz wiadomość"></textarea><br>
-
-            <input type="submit" value="Wyślij" class="submit">
-        </form>
-    </section>
+                <input type="submit" value="Wyślij" class="submit">
+            </form>
+            <div class="containerUnfilled">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus totam nisi doloribus, nihil ullam
+                    in rerum. Doloremque maxime repellendus, quos tempore aliquam rem nobis ea asperiores, ullam dicta
+                    illo. Dignissimos quam quis, accusantium laudantium repellat aliquid fugiat odit eos officiis
+                    quisquam soluta quas perspiciatis fugit cumque. Laudantium iusto harum ducimus.</p>
+            </div>
+        </div>
+</section>
 </body>
 
 </html>
