@@ -8,7 +8,7 @@
 
 .section{
     text-align: center;
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .section header{
@@ -20,7 +20,7 @@
 }
 
 hr{
-    background-color: #543679;
+    background-color: #FF9787;
     border: 0;
     height: 1.5px;
     width: 170px;
@@ -37,18 +37,18 @@ hr{
 
 .btn{
     text-decoration: none;
-    border: 2px solid #07a9ef;
+    border: 2px solid #53708F;
+    background-color: #53708F;
+    color: #fff;
     margin: 15px auto 0 auto;
     padding: 20px 50px;
     display: inline-block;
-    background-color: transparent;
     cursor: pointer;
 }
 
 .btn:hover{
-    border: 2px solid #963583;
-    border-radius: 5px;
-    background-color: #963583;
+    border: 2px solid #FF9787;
+    background-color: #FF9787;
     color: #fff;
 }
 
@@ -81,15 +81,19 @@ footer{
 .main-content p{
     font-size: 0.75em;
     text-transform: none;
+    color: #FF9787;
 }
 
+.main-content span{
+    color: #fff;
+}
 
 /* -------------- Navigation styles -------------- */
 
 
 .main-nav{
     position: sticky;
-    background-color: #06314b;
+    background-color: #53708F;
     top: 0;
     z-index:100;
     padding: 14px 20px;
@@ -118,7 +122,7 @@ footer{
 
 .nav-menu-item a:hover{
     background-color: #fff;
-    color: #06314b;
+    color: #53708F;
 }
 /* -------------- About Section styles -------------- */
 
@@ -134,10 +138,8 @@ footer{
     width: 30%;
 }
 
-.myskills{
-    background-color: #06314b;    
+.myskills{    
     padding: 25px 0px;
-    color: #fff;
     margin-bottom: 50px;
 }
 
@@ -146,7 +148,6 @@ footer{
 }
 
 .myskills h3{
-    background-color: #07a9ef;
     width: 100%;
 }
 
@@ -158,7 +159,7 @@ footer{
 
 .containerSkills i{
     font-size: 50px;
-    color: #fff;
+    color: #846BAF;    
 }
 
 .containerSkills i:hover{
@@ -172,8 +173,8 @@ footer{
 }
 
 .headerAccordion{
-    background-color: #06314b;
-    border: 2px solid #06314b;
+    background-color: #53708F;
+    border: 2px solid #53708F;
     border-radius: 10px;
     margin-bottom: 20px;
     color: #fff;
@@ -182,8 +183,8 @@ footer{
 
 .headerAccordion:hover{
     cursor: pointer;
-    background-color: #963583;
-    border-color: #963583;
+    background-color: #FF9787;
+    border-color: #FF9787;
 }
 
 .panelEducation{
@@ -224,7 +225,7 @@ footer{
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: #543679;
+	background-color: #53708F;
 	top: 0;
 	font-size: 1em;
 	color: #fff;
@@ -304,13 +305,34 @@ footer{
 }
 
 .contact form input:not([type="submit"]), .contact form textarea{
-    border: 2px solid #06314b;
+    border: 1px solid;
     font-size: 100%;
 }
 
-.contact form input:focus, .contact form textarea:focus{
-    border: 2px solid #c345a9;
-    color: #000
+.contact form label{
+    padding: 10px 5px 50px 5px;
+    text-align: justify;
+    font-size: 50%;
+}
+
+.contact form label a{
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+/* class for hiding the long text of consent for processing of personal data */
+.contact form label .agreementShort{
+    visibility: hidden;
+}
+
+.contact form input:not([type="checkbox"]) + input:not([type="submit"]):focus, .contact form textarea:focus{
+    box-shadow: 5px 5px #846BAF;
+    color: #000;
+}
+
+/* fixing the problem with proper display of box-shadow for input with id "name" */
+#name:focus{
+    box-shadow: 5px 5px #846BAF;
+    color: #000;
 }
 
 .containerIcons{
@@ -325,11 +347,11 @@ footer{
 
 .containerIcons i{
     margin-right: 20px;
-    color: #06314b;
+    color: #53708F;
 }
 
 .containerIcons i:hover{
-    color: #963583;
+    color: #FF9787;
 }
 
 
@@ -338,6 +360,10 @@ footer{
 @media(max-width: 1200px){
     .container{
         max-width:992px;
+    }
+
+    .portfolio .portfolio-wrapper .portfolio-item .project{
+        opacity: 0.8;
     }
 }
 
@@ -349,6 +375,10 @@ footer{
 
     .portfolio .portfolio-wrapper .portfolio-item{
         flex-basis: 50%;
+    }
+
+    .portfolio .portfolio-wrapper .portfolio-item .project{
+        opacity: 0.8;
     }
 }
 
@@ -373,6 +403,10 @@ footer{
     .portfolio .portfolio-wrapper .portfolio-item{
         flex-basis: 100%;
     }
+
+    .portfolio .portfolio-wrapper .portfolio-item .project{
+        opacity: 0.8;
+    }
 }
 
 @media(max-width: 480px){
@@ -383,7 +417,7 @@ footer{
     
     .main-nav label{
         display: block;
-        padding: 14px 20px;
+        padding: 10px 20px;
         color: #fff;
         text-transform: uppercase;
         font-size: 1.5em;
@@ -418,7 +452,12 @@ footer{
         font-size: 1.5em;
     }
 
+    .portfolio .portfolio-wrapper .portfolio-item .project{
+        opacity: 0.8;
+    }
+
     .contact form input:not([type="submit"]){
         flex-basis: 100%;
     }
 }
+

@@ -7,28 +7,25 @@ const contSoft=document.querySelector('[class*=contSoft]'); //I grab containers 
 const contHard=document.querySelector('[class*=contHard]'); 
 const displaySoft=document.querySelector('[class*=soft]');//I grab paragraphs that will serve as displays
 const displayHard=document.querySelector('[class*=hard]');
-let eventTarget=null;
 
 
 //I set addEventListeners-when the user will mouseover on the icons in 'myskills' div the exact content will be displayed in the paragraph, depending on attribute 'value' of the given icon
 
 contSoft.addEventListener('mouseover', function(event){
-    eventTarget=event.target;
 
-    if(eventTarget==contSoft){
-        displaySoft.innerText="najedź na ikonę";
+    if(event.target==contSoft){
+        displaySoft.innerText=".";
     }else{
-        displaySoft.innerText=eventTarget.getAttribute('title');
+        displaySoft.innerText=event.target.getAttribute('title');
     }
 })
 
 contHard.addEventListener('mouseover', function(event){
-    eventTarget=event.target;;
 
-    if(eventTarget==contHard){
-        displayHard.innerText="najedź na ikonę";
+    if(event.target==contHard){
+        displayHard.innerText=".";
     }else{
-        displayHard.innerText=eventTarget.getAttribute('title');
+        displayHard.innerText=event.target.getAttribute('title');
     }
 })
 
@@ -62,14 +59,17 @@ main.addEventListener('click', function(event){
 
 //--------------Section Contact
 
-//before sending the form, I verify whether values in above inputs are not just whitespaces
+//before sending the form, I verify whether values in inputs are not just whitespaces
 
 const btn=document.querySelector('input[type=submit]');
+const showMore=document.getElementById('showMore');
 
 btn.addEventListener('click', function(event){
-    // I'm getting the values of input 'name' and 'lastname' 
+    // I'm getting the values of input 'name' and 'lastname'; and I'm assigning checkbox and text area to variables;
     const name=(document.getElementById('name').value).trim();
     const lastname=(document.getElementById('lastname').value).trim();
+    const checkbox=document.getElementById('agreement');
+    const message=document.getElementById('message');
     
     if(name=="" && lastname==""){
         event.preventDefault();
@@ -84,8 +84,26 @@ btn.addEventListener('click', function(event){
         event.preventDefault();
         alert('Proszę wpisać poprawne dane w polu: Imię');
         document.getElementById('name').value="";
+        // I'm checking whether checkbox with agreement is 'checked'
+    }else if(checkbox.checked==false){
+        event.preventDefault();
+        message.nextElementSibling.style.color="red";
+        message.nextElementSibling.style.fontStyle="italic";
     }
     
 })
 
+//switching between full and short consent for processing of personal data
 
+showMore.addEventListener('click', function(event){
+    event.preventDefault();
+    const divAgreement=event.target.nextElementSibling;
+
+    if(divAgreement.classList=="agreementShort"){
+        divAgreement.classList.remove("agreementShort");
+        event.target.innerText="Zobacz mniej";
+    }else if(divAgreement.classList==""){
+        divAgreement.classList.add("agreementShort");
+        event.target.innerText="Zobacz więcej";
+    }
+})
