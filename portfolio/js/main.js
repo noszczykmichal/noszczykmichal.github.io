@@ -97,13 +97,13 @@ btn.addEventListener('click', function(event){
 
 showMore.addEventListener('click', function(event){
     event.preventDefault();
-    const divAgreement=event.target.nextElementSibling;
+    const spanAgreement=event.target.nextElementSibling;
 
-    if(divAgreement.classList=="agreementShort"){
-        divAgreement.classList.remove("agreementShort");
+    if(spanAgreement.classList=="agreementShort"){
+        spanAgreement.classList.remove("agreementShort");
         event.target.innerText="Zobacz mniej";
-    }else if(divAgreement.classList==""){
-        divAgreement.classList.add("agreementShort");
+    }else if(spanAgreement.classList==""){
+        spanAgreement.classList.add("agreementShort");
         event.target.innerText="Zobacz więcej";
     }
 })
