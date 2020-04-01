@@ -15,6 +15,7 @@
     <div class="container">
         <form action="https://formspree.io/mqkadaag" method="POST">
             <h1 class="formHeader">Zapraszamy na kurs-poniżej wpisz swoje dane:</h1>
+            <div class="containerUnfilled"></div>
             <label for="name">Imię:</label>
             <input type="text" name="name" id="name"><br>
 
@@ -36,16 +37,28 @@
             </select><br>
 
             <p>Wybierz płeć:</p>
-            <label for="male"><input type="radio" name="gender" id="male" value="male" checked="true">Mężczyzna</label>
+            <label for="male"><input type="radio" name="gender" id="male" value="male" checked>Mężczyzna</label>
             <label for="female"><input type="radio" name="gender" id="female" value="female">Kobieta</label><br>
 
-            <label for="agreement"><input type="checkbox" name="agreement" id="agreement">Wyrażam zgodę na
-                otrzymywanie
-                od Fajne zadania Sp. z o.o. drogą elektroniczną na wskazany przeze mnie w Formularzu adres e-mail
-                informacji handlowych, dotyczących produktów i usług oferowanych przez Fajne zadania Sp. z o.o. w
-                rozumieniu ustawy o świadczeniu usług drogą elektroniczną z dnia 18 lipca 2002 r. (Dz. U z 2013 r.,
-                poz.
-                1422 ze zm.)</label>
+            <label for="agreement">
+                <input type="checkbox" name="agreement" id="agreement">
+                <span>Wyrażam zgodę na przetwarzanie moich danych osobowych przez firmę XYZ z siedzibą w Warszawie przy
+                    Ul. w celach kontaktu ze mną jeśli pozostawię swoje dane oraz w celu odpowiedzi na oferty, jeśli o
+                    nią zapytam. Moje dane będą przetwarzane do czasu cofnięcia zgody. Mam prawo dostępu do swoich danych,
+                    sprostowania, usunięcia lub ograniczenia przetwarzania danych, sprzeciwu, wniesienia skargi do
+                    organu nadzorującego i do przeniesienia danych.</span>
+                <a href="" id="showMore">Zobacz więcej</a>
+                <span>Działając w zgodzie z art. 13 ust. 1 i ust. 2 rozporządzenia Parlamentu
+                    Europejskiego i Rady (UE) 2016/679 z 27 kwietnia 2016 w skrócie RODO informujemy, że nasza strona
+                    będzie za Twoją zgodą pobierać i przetwarzać dane osobowe. Administratorem Państwa danych osobowych
+                    jest firma: XYZ, ul. Warszawa. Przetwarzanie Państwa danych osobowych odbywa się na podstawie
+                    art. 6 RODO i w celach marketingowych. Państwa dane osobowe będą przetwarzane przez okres 5 lat do
+                    czasu wykorzystania możliwości marketingowych i analizy danych potrzebnych do prowadzenia działalności
+                    gospodarczej lub do czasu odwołania zgody na przetwarzanie danych. Informujemy, że mają Państwo
+                    prawo do wycofania tej zgody w dowolnym terminie. Dane osobowe będą przetwarzane do czasu jej
+                    wycofania. Mają Państwo również prawo dostępu do swoich danych, ich sprostowania, usunięcia lub
+                    ograniczenia przetwarzania, a także do wniesienia skargi do organu nadzorującego.</span>
+            </label>
             <br>
 
             <label for="message">Wiadomość:</label>
@@ -54,7 +67,6 @@
 
             <input type="submit" value="Wyślij" class="submit">
         </form>
-        <div class="containerUnfilled"></div>
     </div>
 </section>
 

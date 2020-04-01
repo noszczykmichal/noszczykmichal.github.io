@@ -2,9 +2,10 @@
 
 const submit= document.querySelector('[class=submit]');
 const unfilled=document.querySelector('[class=containerUnfilled]');
+const showMore=document.getElementById('showMore');
 let errors=[]; //array for holding any errors that may occur during filling up the form
 
-//addEventListener on submit button  
+//addEventListener on submit button
 
 submit.addEventListener('click', function(event){
     //asigning inputs and checkbox of the form to variables
@@ -14,7 +15,6 @@ submit.addEventListener('click', function(event){
     const email=document.getElementById('email').value;
     const phone=document.getElementById('phone').value;
     const city=document.getElementById('city').value;
-    const agreement=document.getElementById('agreement');
     
     //conditional statements to check whether all is filled up correctly; there is no verification of text area as its filling is optional; 
 
@@ -53,7 +53,7 @@ submit.addEventListener('click', function(event){
     //conditional statement checks if array with errors is empty; if it's not the list of blank inputs is displayed in div with class 'containerUnfilled';
 
    if(errors.length!=0){
-       unfilled.innerHTML="";
+       unfilled.innerHTML='';
        for(let i=0; i<errors.length; i++){
            unfilled.insertAdjacentHTML('beforeend', errors[i]);
        }
@@ -61,4 +61,20 @@ submit.addEventListener('click', function(event){
 
    //after the final iteration of the loop the array is emptied to prevent the list from being doubled on the next check;
    errors=[];
+})
+
+//addEventListener on link to show or hide the full text of the consent 
+
+showMore.addEventListener('click', function(event){
+    event.preventDefault();
+
+    const spanAgreement=event.target.nextElementSibling;
+    
+    if(spanAgreement.classList=='agreementLong'){
+        spanAgreement.classList.remove('agreementLong');
+        event.target.innerHTML='Zobacz więcej';
+    }else if(spanAgreement.classList==''){
+        spanAgreement.classList.add('agreementLong');
+        event.target.innerHTML='Zobacz mniej';
+    }
 })
