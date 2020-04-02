@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Generator Pesel</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <section class="glowna">
-        <div class="form">
-            <h1 class="naglowek">Generator Pesel</h1>
+    <section class="main">
+        <div class="container">
+            <h1 class="header">Generator Pesel</h1>
             <form>
-                <input type="text" name="imieNazwisko" id="imieNazwisko" placeholder="Imię i Nazwisko" />
+                <input type="text" name="imieNazwisko" id="imieNazwisko" placeholder="Imię i Nazwisko"/>
                 <label for="dataUrodzenia">Wpisz Datę Urodzenia:</label>
-                <input type="date" name="dataUrodzenia" value="2020-01-01" id="dataUrodzenia" />
+                <input type="date" name="dataUrodzenia" value="2020-01-01" id="dataUrodzenia"/>
                 <label for="mezczyzna"><input type="radio" name="plec" value="mezczyzna"
                         id="mezczyzna">Mężczyzna</label>
                 <label for="kobieta"><input type="radio" name="plec" value="kobieta" id="kobieta"
-                        checked="true">Kobieta</label>
+                        checked>Kobieta</label>
             </form>
-            <button id="generuj">Generuje Dane</button>
+            <button id="generuj" class="btn">Generuj Dane</button>
             <p>Obywatel <span id="obywatel">...................</span> ma Pesel <span
                     id="pesel">...................</span>
             </p>
