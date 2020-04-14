@@ -256,10 +256,10 @@ footer{
 
 .icon{
     position: relative;
-    height: 50px;
-    width: 50px;
-    margin: -15px 0 30px 30px;
-    background-image: url('../img/icons/purpleJquery.png');
+    height: 70px;
+    width: 70px;
+    margin: -25px 0 30px 30px;
+    background-image: url('../img/icons/jQuery.png');
     background-size: cover;
 }
 
