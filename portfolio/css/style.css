@@ -191,6 +191,10 @@ footer{
     display: none;
 }
 
+.panelEducation a{
+    color: #000000;
+}
+
 .active{
     display: block;
 }
