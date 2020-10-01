@@ -1,0 +1,144 @@
+*{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+/* Styles for navbar */
+
+ .navbar{
+    background-color: #444;
+}
+
+.navbar-brand{
+    margin-left:10em;
+}
+
+#navbarNav:last-child{
+    margin-right: 10em;
+}
+
+.navbar-toggler{
+    background-color: #c2c2c2;
+}
+
+.navbar .navbar-brand, .navbar-nav .nav-item .nav-link{
+    color: #c2c2c2;
+}
+
+/* Section Form */
+.sectionForm{
+    background-image: url('../img/form-background.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 5em 0em; 
+}
+
+.formHeader{
+    padding-top: 1.75em;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.formHeaderH1{
+    font-size: 2em;
+}
+
+.formHeaderP{
+    font-size: 1em;
+    color: #c2c2c2;
+}
+
+.iconForm{
+    font-size: 3em;
+    color: #c2c2c2;
+}
+
+.formBody{
+    padding-top: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.message{
+    width: 100%;
+    border-radius: 2%;
+}
+
+.customBtn{
+    width: 100%;
+    background-color: #e38f42;
+    color: #fff;
+}
+
+.agreementP{
+    font-size: 0.83em;
+    color: #c2c2c2;
+}
+
+.agreementSpan{
+    color: #e38f42;
+    font-size: 0.83em;
+}
+
+.content-holder{
+    padding: 8.3em 0em 2.75em 0em;
+}
+
+.inscriptionH1{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.btnOrange{
+    background-color: #e38f42;
+    border-color: #e38f42;
+    color: #fff;
+}
+
+.btnTransparent{
+    margin-left: 0.5em;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+}
+
+.btnTransparent:hover{
+    color: #e38f42;
+}
+.iconsForBtn{
+    margin-left: 0.1em; 
+}
+
+/* Section Inspire */
+
+.inspire{
+    padding: 5em 0em;
+}
+
+.inspireContent{
+    padding: 2em 0em;
+}
+
+.inspireH1{
+    font-size: 2em;
+}
+
+.inspireP{
+    color: #888;
+}
+
+.linkOrange{
+    color: #e38f42;
+}
+
+/* Footer */
+
+footer{
+    padding: 5em 0em;
+    background-color: #f8f8f8;
+}
+
+.footerH1{
+    font-size: 2em;
+}
+
+.footerP{
+    color: #888;
+}
