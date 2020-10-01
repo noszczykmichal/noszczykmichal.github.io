@@ -173,12 +173,14 @@ footer{
 }
 
 .headerAccordion{
+    display:flex;
     background-color: #53708F;
     border: 2px solid #53708F;
     border-radius: 10px;
     margin-bottom: 20px;
     color: #fff;
     font-size: 1.5em;
+    align-items: center;
 }
 
 .headerAccordion:hover{
@@ -416,6 +418,12 @@ span:nth-child(4){
 
     .portfolio .portfolio-wrapper .portfolio-item .project{
         opacity: 0.8;
+    }
+}
+
+@media(max-width: 612px){
+    .headerAccordion{
+        height: 2.75em;
     }
 }
 

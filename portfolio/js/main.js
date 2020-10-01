@@ -35,21 +35,31 @@ contHard.addEventListener('mouseover', function(event){
 
 const main=document.querySelector('[class=main]');
 const header=document.querySelectorAll('[class=headerAccordion]');
-// console.log("header", header);
-
 
 
 main.addEventListener('click', function(event){
+    //event target is h3; not the div it's nested in
 
-    //on every run of loop class 'active' is removed from all elements
+    const parentSibling=event.target.parentElement.nextElementSibling;
+    //if event.target parent's nextElementSibling is already visible I remove the class active- allows to hide description for element that is clicked twice
+
+    if(parentSibling.classList.contains('active')){
+        parentSibling.classList.remove('active');
+        return null;
+    }
     for(let i=0; i<header.length; i++){
+
+        //here I'm removing class "active" from divs with class "panelEducation"
         let removeActive=header[i].nextElementSibling;
         removeActive.classList.remove('active');
     }
 
     //the clicked element is given additional class that allows it to be displayed
     for(let j=0; j<header.length; j++){
-    if(event.target==header[j]){
+        //here I check which h3 element was clicked, if I find event.target, the element next to its parent receives class "active" and becomes visible to the user
+        
+
+    if(event.target==header[j].firstElementChild){
         let panel=header[j].nextElementSibling;
         panel.classList.add('active');
     }
