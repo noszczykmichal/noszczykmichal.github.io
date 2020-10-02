@@ -1,20 +1,12 @@
 *{
     font-family: 'Raleway', sans-serif;
-    font-size: 18px;
+    font-size: 18px; 
 }
 
 /* Styles for navbar */
 
  .navbar{
     background-color: #444;
-}
-
-.navbar-brand{
-    margin-left:10em;
-}
-
-#navbarNav:last-child{
-    margin-right: 10em;
 }
 
 .navbar-toggler{
@@ -87,6 +79,10 @@
     font-weight: 700;
 }
 
+.btn{
+    margin: 2em 0em;
+}
+
 .btnOrange{
     background-color: #e38f42;
     border-color: #e38f42;
@@ -108,7 +104,7 @@
 
 /* Section Inspire */
 
-.inspire{
+.sectionInspire{
     padding: 5em 0em;
 }
 
