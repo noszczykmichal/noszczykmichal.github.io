@@ -2,8 +2,28 @@
     font-family: 'Raleway', sans-serif;
     font-size: 18px; 
 }
+/* color change for input's placeholder that was not filled up by the user */
 
-/* Styles for navbar */
+.inputBlank::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #f00;
+}
+.inputBlank:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #f00;
+    opacity: 1;
+}
+.inputBlank::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #f00;
+    opacity: 1;
+}
+.inputBlank:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #f00;
+}
+
+/*-------------- Styles for navbar --------------*/
 
  .navbar{
     background-color: #444;
@@ -17,7 +37,8 @@
     color: #c2c2c2;
 }
 
-/* Section Form */
+/*-------------- Section Form --------------*/
+
 .sectionForm{
     background-image: url('../img/form-background.jpg');
     background-size: cover;
@@ -27,7 +48,7 @@
 
 .formHeader{
     padding-top: 1.75em;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: #00000059;
 }
 
 .formHeaderH1{
@@ -46,12 +67,7 @@
 
 .formBody{
     padding-top: 1em;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.message{
-    width: 100%;
-    border-radius: 2%;
+    background-color: #0000004d;
 }
 
 .customBtn{
@@ -102,7 +118,7 @@
     margin-left: 0.1em; 
 }
 
-/* Section Inspire */
+/*-------------- Section Inspire --------------*/
 
 .sectionInspire{
     padding: 5em 0em;
@@ -124,7 +140,7 @@
     color: #e38f42;
 }
 
-/* Footer */
+/*-------------- Footer --------------*/
 
 footer{
     padding: 5em 0em;
