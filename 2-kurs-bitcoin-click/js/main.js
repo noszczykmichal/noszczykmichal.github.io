@@ -67,7 +67,9 @@ $(function () {
 
   }
 
- $('.btn').on('click', sprawdzKurs);
+//  $('.btn').on('click', sprawdzKurs);
+
+    setInterval(sprawdzKurs, 3000);
 
 
 });
