@@ -87,10 +87,10 @@
 }
 
 .content-holder{
-    padding: 8.3em 0em 2.75em 0em;
+    padding: 10em 0em 2.75em 0em;
 }
 
-.inscriptionH1{
+.inscriptionH2{
     font-size: 2em;
     font-weight: 700;
 }
@@ -128,7 +128,7 @@
     padding: 2em 2em;
 }
 
-.inspireH1{
+.inspireH2{
     font-size: 2em;
 }
 
@@ -147,10 +147,14 @@ footer{
     background-color: #f8f8f8;
 }
 
-.footerH1{
+.footerH2{
     font-size: 2em;
 }
 
 .footerP{
     color: #888;
+}
+
+.footerContent{
+    padding: 0em 2em;
 }
