@@ -1,0 +1,116 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*-------- Section Form --------*/
+
+.form{
+    background-image: url('../img/background.png');
+    background-size: cover;
+}
+
+.form a:hover{
+    text-decoration: none;
+}
+
+.brandName{
+    color: #ecd407;
+    font-size: calc(100% + 0.75vh + 0.75vw);
+    font-weight: 700;
+}
+
+.contactUs{
+    font-weight: 100;
+}
+
+.whiteFont{
+    color: #fff;
+}
+.iconTel{
+    color: #fff;
+    font-size: calc(100% + 0.75vh + 0.75vw);
+}
+
+.callToUs{
+    font-size: calc(10% + 0.75vh + 0.75vw);
+}
+
+.divWithForm{
+    padding: 10em 0em;
+}
+
+.divWithForm p{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    
+}
+
+.yellowFont{
+    color: #ecd407; 
+}
+
+form{
+    background-color: #001d8a;
+}
+
+form input[type="submit"]{
+    color: #000000;
+    background-color: #ecd407;
+    border: #ecd407;
+    font-weight: 700;
+}
+
+
+/*-------- Section About Us --------*/
+
+
+.aboutUs{
+    background-color: #eaecf0;
+}
+
+.counter-count{
+    font-size: 1.2em;
+    background-color: #001d8a;;
+    border-radius: 50%;
+    position: relative;
+    color: #ffffff;
+    line-height: 4.5em;
+    width: 4.5em;
+    height: 4.5em;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.experience-p,.clients-p{
+    font-size: 1.5em;
+    color: #000000;
+    line-height: 2em;
+}
+
+caption{
+    caption-side: top;
+}
+
+.quotes tr{
+    border-bottom: 1px solid gray;
+}
+
+.quotes td{
+    font-size: 1em;
+}
+
+.rowQuotesAndArticles{
+    margin: 4.5em 0em;
+}
+
+/*-------- Footer --------*/
+
+
+footer{
+    background-color: #292929;
+    color: #fff;
+}
+
