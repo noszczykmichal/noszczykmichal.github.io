@@ -2,6 +2,12 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+/* styles for dynamic change of placeholder's text color after form validation */
+
+.invalidValue::-webkit-input-placeholder{
+    color: red;
+}
+
 /*-------- Section Form --------*/
 
 .form{

@@ -55,15 +55,15 @@
                     <p>Zostaw <span class="yellowFont">sprawy finansowe</span> nam <span class="yellowFont">skup się na swoim biznesie</span></p>
     
                     <form class="px-3 pb-3" action="https://formspree.io/f/xwkwlovv" method="POST" autocomplete="on">
-                        <p class="py-3">Zostaw swoje dane, a my się z Tobą skontaktujemy</p>
+                        <p class="py-3">Zostaw nam swoje dane, a na pewno oddzwonimy</p>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="fullName" placeholder="Imię i nazwisko">
+                            <input class="form-control" type="text" name="fullName" placeholder="Imię i nazwisko" required>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="email" name="email" placeholder="Email">
+                            <input class="form-control" type="email" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="tel" name="tel" placeholder="Telefon">
+                            <input class="form-control" type="tel" name="tel" placeholder="Telefon np. 600-800-300" required>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" name="message" cols="30" rows="2" placeholder="Wiadomość"></textarea>
@@ -100,35 +100,35 @@
             </div>
         </div>
         <div class="container">
-            <div class="row d-md-flex flex-md-wrap justify-content-sm-center justify-content-md-start rowQuotesAndArticles">
+            <div class="row justify-content-sm-center justify-content-md-start rowQuotesAndArticles">
                 <div class="col-sm-10 col-md-6 col-lg-4">
-                    <aside class="py-5 quotes">
+                    <aside class="py-5 quotes d-sm-flex justify-content-sm-center justify-content-md-start">
                         <table>
                             <caption class="text-center">Aktualne notowania walut</caption>
                             <tbody>
                                 <tr class="d-flex justify-content-between">
                                     <td class="m-1 currency">EUR/PLN</td>
-                                    <td class="m-1 quote">4.4706</td>
-                                    <td class="m-1 pctChange">-0.42%</td>
-                                    <td class="m-1 date">09-10</td>
+                                    <td class="m-1 quote">0.0000</td>
+                                    <td class="m-1 pctChange">0.00%</td>
+                                    <td class="m-1 date">00-00</td>
                                 </tr>
                                 <tr class="d-flex justify-content-between">
                                     <td class="m-1 currency">USD/PLN</td>
-                                    <td class="m-1 quote">4.4706</td>
-                                    <td class="m-1 pctChange">-0.42%</td>
-                                    <td class="m-1 date">09-10</td>
+                                    <td class="m-1 quote">0.0000</td>
+                                    <td class="m-1 pctChange">0.00%</td>
+                                    <td class="m-1 date">00-00</td>
                                 </tr>
                                 <tr class="d-flex justify-content-between">
                                     <td class="m-1 currency">CHF/PLN</td>
-                                    <td class="m-1 quote">4.4706</td>
-                                    <td class="m-1 pctChange">1.02%</td>
-                                    <td class="m-1 date">09-10</td>
+                                    <td class="m-1 quote">0.0000</td>
+                                    <td class="m-1 pctChange">0.00%</td>
+                                    <td class="m-1 date">00-00</td>
                                 </tr>
                                 <tr class="d-flex justify-content-between">
                                     <td class="m-1 currency">GBP/PLN</td>
-                                    <td class="m-1 quote">4.4706</td>
-                                    <td class="m-1 pctChange">-0.02%</td>
-                                    <td class="m-1 date">09-10</td>
+                                    <td class="m-1 quote">0.0000</td>
+                                    <td class="m-1 pctChange">0.00%</td>
+                                    <td class="m-1 date">00-00</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -137,7 +137,7 @@
                 <div class="col-sm-10 col-md-6 col-lg-4">
                     <div class="articles">
                         <article class="py-5">
-                            <h2 class="pb-3">To jest artykul</h2>
+                            <h2 class="pb-3">To jest artykuł</h2>
                             <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consequuntur perferendis corrupti debitis facilis sequi ipsam doloribus. Enim, est distinctio?</p>
                             <a href="#">Czytaj dalej</a>
                         </article>
@@ -146,7 +146,7 @@
                 <div class="col-sm-10 col-md-6 col-lg-4">
                     <div class="articles">
                         <article class="py-5">
-                            <h2 class="pb-3">To jest artykul</h2>
+                            <h2 class="pb-3">To jest artykuł</h2>
                             <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consequuntur perferendis corrupti debitis facilis sequi ipsam doloribus. Enim, est distinctio?</p>
                             <a href="#">Czytaj dalej</a>
                         </article>
@@ -159,12 +159,16 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-10 col-sm-6 col-md-6 col-lg-6 text-center">
-                    <i class="fa fa-phone-alt yellowFont" aria-hidden="true"></i>
+                    <div class="pb-3">
+                        <i class="fa fa-phone-alt yellowFont" aria-hidden="true"></i>
                     <span class="phone">+ 22 00 000 123</span>
+                    </div>
                 </div>
                 <div class="col-10 col-sm-6 col-md-6 col-lg-6 text-center">
-                    <i class="fa fa-envelope yellowFont" aria-hidden="true"></i>
+                    <div>
+                        <i class="fa fa-envelope yellowFont" aria-hidden="true"></i>
                     <span class="mail">super@pozyczka.pl</span>
+                    </div>
                 </div>
             </div>
         </div>
