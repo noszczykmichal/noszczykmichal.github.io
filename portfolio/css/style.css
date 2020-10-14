@@ -183,6 +183,10 @@ footer{
     align-items: center;
 }
 
+.headerAccordion h3{
+    width: 100%;
+}
+
 .headerAccordion:hover{
     cursor: pointer;
     background-color: #FF9787;
