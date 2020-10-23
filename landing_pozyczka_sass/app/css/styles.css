@@ -1,0 +1,197 @@
+/* Font, color of fonts*/
+/* Background color sections and elements*/
+/*-------- General Styles --------*/
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #f5f5f5; }
+
+/*-------- Main Header Styles --------*/
+header {
+  position: absolute;
+  width: 100%; }
+  header .container .main-logo {
+    display: inline-block;
+    margin-left: 30px; }
+    header .container .main-logo i {
+      color: #ecd407;
+      margin-top: 10px;
+      font-size: 2rem;
+      float: left;
+      margin-right: 0.8rem; }
+    header .container .main-logo p {
+      margin-top: 5px;
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 700; }
+  header .container .header-contact {
+    width: 300px;
+    float: right; }
+    header .container .header-contact i {
+      margin-top: 10px;
+      font-size: 2rem;
+      float: left;
+      margin-right: 0.8rem;
+      transform: rotate(100deg); }
+    header .container .header-contact span {
+      display: block;
+      margin-top: 5px;
+      font: 0.8 rem; }
+
+/*-------- Section Form Styles --------*/
+.formSection {
+  height: 110vh;
+  padding: 10rem 0rem;
+  background-image: url("../img/background.png");
+  background-size: cover;
+  color: #f5f5f5; }
+  .formSection .container {
+    float: right;
+    width: 34rem;
+    padding: 5rem; }
+
+form {
+  padding: 1rem;
+  background-color: #001d8a; }
+  form .yellowFont {
+    color: #ecd407; }
+  form input:not([type="submit"]) {
+    display: block;
+    height: 2.5rem;
+    width: 100%;
+    margin: 0.75rem 0rem;
+    border-radius: 5px;
+    color: #000000; }
+  form textarea {
+    width: 100%;
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px; }
+  form input[type="submit"] {
+    display: block;
+    height: 2.5rem;
+    width: 100%;
+    margin: 0.75rem 0rem;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #ecd407;
+    font-weight: 700;
+    border-color: #ecd407; }
+
+/*-------- Section About Styles--------*/
+.aboutUs {
+  padding: 5rem 0rem;
+  background-color: #eaecf0;
+  color: #000000; }
+  .aboutUs .counters {
+    width: 100%;
+    display: flex;
+    margin-bottom: 4rem; }
+    .aboutUs .counters .experience, .aboutUs .counters .clients {
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center; }
+    .aboutUs .counters p.counterCount {
+      display: flex;
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: #001d8a;
+      color: #f5f5f5;
+      font-size: 1.25rem;
+      margin: 0 auto; }
+    .aboutUs .counters .experienceP, .aboutUs .counters .clientsP {
+      font-size: 1.5rem; }
+  .aboutUs .container {
+    width: 100%;
+    padding: 3rem 3rem;
+    display: flex;
+    justify-content: space-between; }
+    .aboutUs .container .quotes {
+      margin-top: 2rem; }
+    .aboutUs .container .articles {
+      display: inline-block;
+      width: 33%;
+      padding: 0rem 2rem; }
+
+.articles table {
+  width: 100%;
+  line-height: 1.75rem; }
+  .articles table caption {
+    caption-side: top;
+    margin: 1rem 0rem; }
+  .articles table td {
+    border-bottom: 1px solid #808080; }
+
+.articles h2 {
+  font-size: 2rem;
+  font-weight: 400; }
+
+.articles p {
+  text-align: justify;
+  line-height: 1.75rem; }
+
+.articles a {
+  text-decoration: none;
+  color: #007BFF; }
+
+/*-------- Footer Style --------*/
+footer {
+  height: 10rem;
+  background-color: #292929; }
+  footer .container {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    footer .container i {
+      color: #ecd407; }
+    footer .container .contact {
+      padding: 2.5rem;
+      width: 45%;
+      display: inline-block;
+      text-align: center; }
+
+/*-------- Responsive css --------*/
+@media (max-width: 992px) {
+  .aboutUs .container {
+    padding: 3rem 3rem;
+    display: flex;
+    flex-wrap: wrap; }
+    .aboutUs .container .articles {
+      width: 45%; } }
+
+@media (max-width: 768px) {
+  .formSection .container {
+    float: none;
+    margin: 0 auto; }
+  .aboutUs .counters {
+    display: block; }
+    .aboutUs .counters .experience {
+      margin-bottom: 5rem; }
+    .aboutUs .counters .experience, .aboutUs .counters .clients {
+      width: 100%; }
+  .aboutUs .container {
+    padding: 0rem 3rem;
+    display: block; }
+    .aboutUs .container .quotes {
+      padding: 0rem 4rem; }
+    .aboutUs .container .articles {
+      width: 100%;
+      padding-bottom: 2rem; } }
+
+@media (max-width: 576px) {
+  header .container .main-logo, header .container .header-contact {
+    width: 90%;
+    float: none;
+    margin-left: 30px; }
+  footer .container {
+    display: block;
+    text-align: center; }
+    footer .container .contact {
+      width: 100%;
+      padding: 1rem; } }

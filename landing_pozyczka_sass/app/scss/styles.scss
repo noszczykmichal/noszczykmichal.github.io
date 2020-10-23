@@ -1,0 +1,275 @@
+@import 'mixins';
+@import 'variables';
+
+/*-------- General Styles --------*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: $mainFont;
+    color: $mainFontColor;
+}
+
+/*-------- Main Header Styles --------*/
+
+header{
+    position: absolute;
+    width: 100%;
+
+    .container{     
+        .main-logo{
+            display: inline-block;
+            margin-left: 30px;
+
+            i{  
+                color: $yellowIcons;
+               @include icons-header;
+            }
+
+            p{
+                margin-top: 5px;
+                display: inline-block;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+
+        .header-contact{
+            width: 300px;
+            float: right;
+            i{
+                @include icons-header;
+                transform: rotate(100deg);
+            }
+            span{
+                display: block;
+                margin-top: 5px; 
+                font: 0.8 rem;
+            }
+        }
+    }
+}
+
+/*-------- Section Form Styles --------*/
+
+.formSection{
+    height: 110vh;
+    padding: 10rem 0rem;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    color: $mainFontColor;
+
+    .container{
+        float: right;
+        width: 34rem;
+        padding: 5rem;
+    
+    }
+}
+
+form{
+    padding: 1rem;
+    background-color: $formBackgroundColor;
+    
+
+    .yellowFont{
+        color: $yellowIcons;
+    }
+
+    input:not([type="submit"]){
+        @include stylesForInputs;
+    }
+
+    textarea{
+        @include styleForTextArea;
+    }
+
+    input[type="submit"]{
+        @include stylesForInputs;
+        background-color: $bottonSubmit;
+        font-weight: 700;
+        border-color: $bottonSubmit;
+        
+    }
+}
+
+/*-------- Section About Styles--------*/
+
+.aboutUs{
+    padding: 5rem 0rem;
+    background-color: $backgroundColorSectionAbout;
+    color: $sectionAboutFontColor;
+
+    .counters{
+        width: 100%;
+        display: flex;
+        margin-bottom: 4rem;
+
+        .experience, .clients{
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        p.counterCount{
+            @include paragraphWithCounter;
+            margin: 0 auto;
+        }
+
+        .experienceP, .clientsP{
+            font-size: 1.5rem;
+        }
+    }
+
+    .container{
+        width: 100%;
+        padding: 3rem 3rem;
+        display: flex;
+        justify-content: space-between;
+
+        .quotes{
+            margin-top: 2rem;
+        }
+        .articles{
+            display: inline-block;
+            width: 33%;
+            padding: 0rem 2rem;
+        }
+    }
+}
+
+.articles{
+    table{
+        width: 100%;
+        line-height: 1.75rem;
+
+        caption{
+            caption-side: top;
+            margin: 1rem 0rem;
+        }
+
+        td{
+            @include tableData;
+                
+        }
+       
+    }
+    
+    h2{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    p{
+        text-align: justify;
+        line-height: 1.75rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: $colorLinks;
+    }
+}
+
+/*-------- Footer Style --------*/
+
+footer{
+    height: 10rem;
+    background-color: $backgroundColorFooter;
+   
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        i{
+            color: $yellowIcons;
+        }
+     
+        .contact{
+            padding: 2.5rem;
+            width: 45%;
+            display: inline-block;
+            text-align: center;
+        }
+    }    
+}
+
+/*-------- Responsive css --------*/
+
+@media(max-width: 992px){
+    .aboutUs{
+        .container{
+            padding: 3rem 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            .articles{
+                width: 45%;
+                
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .formSection{
+        .container{
+           float: none;
+           margin: 0 auto; 
+        }
+    }
+
+    .aboutUs{
+        .counters{
+            display: block;
+
+            .experience{
+                margin-bottom: 5rem;;
+            }
+            .experience, .clients{
+                width: 100%;
+            }
+        }
+
+        .container{
+            padding: 0rem 3rem;
+            display: block;
+
+            .quotes{
+                padding: 0rem 4rem;
+            }
+
+            .articles{
+                width: 100%;
+                padding-bottom: 2rem; 
+            }
+        }
+    }
+    
+}
+
+@media(max-width: 576px){
+    header{
+        .container{
+            .main-logo,.header-contact{
+                width: 90%;
+                float: none;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    footer{
+        .container{
+            display: block;
+            text-align: center;
+            .contact{
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    }
+}

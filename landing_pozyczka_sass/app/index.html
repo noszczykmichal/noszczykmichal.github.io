@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page Pożyczka z Sass</title>
+    <!-- Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Main header -->
+    <header>
+        <div class="container">
+            <div class="main-logo">
+                <i class="fa fa-university" aria-hidden="true"></i>
+                <p>Finanse</p>
+            </div>
+            <div class="header-contact">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="call">Zadzwoń do nas</span>
+                <span class="phone">+ 22 00 000 123</span>
+            </div>
+        </div>
+    </header>
+    <!-- Section Form -->
+    <section class="formSection">
+        <div class="container">
+            <form action="" autocomplete="on">
+                <h2>Zostaw <span class="yellowFont">sprawy finansowe</span> nam <span class="yellowFont">skup się na
+                        swoim biznesie</span></h2>
+                <input type="text" name="fullName" placeholder="Imię i nazwisko" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="tel" placeholder="Telefon np: 600-800-900" required>
+                <textarea name="message" cols="30" rows="5"></textarea>
+                <input type="submit" value="Wyślij zgłoszenie">
+            </form>
+        </div>
+    </section>
+    <!-- Section About Us -->
+    <section class="aboutUs">
+        <div class="counters">
+            <div class="experience">
+                <p class="experienceP">Jesteśmy na rynku</p>
+                <p class="counterCount">17</p>
+                <p class="experienceP">lat!</p>
+            </div>
+            <div class="clients">
+                <p class="clientsP">Zaufało nam już</p>
+                <p class="counterCount">300</p>
+                <p class="clientsP">klientów.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="articles quotes">
+                <table>
+                    <caption>Aktualne notowania walut</caption>
+                    <tbody>
+                        <tr class="myrow">
+                            <td class="currency">EUR/PLN</td>
+                            <td class="quote">0.0000</td>
+                            <td class="pctChange">0.00%</td>
+                            <td class="date">00-00</td>
+                        </tr>
+                        <tr>
+                            <td class="currency">USD/PLN</td>
+                            <td class="quote">0.0000</td>
+                            <td class="pctChange">0.00%</td>
+                            <td class="date">00-00</td>
+                        </tr>
+                        <tr>
+                            <td class="currency">CHF/PLN</td>
+                            <td class="quote">0.0000</td>
+                            <td class="pctChange">0.00%</td>
+                            <td class="date">00-00</td>
+                        </tr>
+                        <tr>
+                            <td class="currency">GBP/PLN</td>
+                            <td class="quote">0.0000</td>
+                            <td class="pctChange">0.00%</td>
+                            <td class="date">00-00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="articles">
+                <h2>To jest artykuł</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in quis animi vero cumque sequi
+                    voluptatibus a tempora nisi eveniet.</p>
+                <a href="#">Czytaj dalej</a>
+            </div>
+            <div class="articles">
+                <h2>To jest artykuł</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto labore quisquam minus inventore
+                    magni repellat omnis voluptas quia deserunt!</p>
+                <a href="#">Czytaj dalej</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="contact">
+                <i class="fa fa-phone-alt" aria-hidden="true"></i>
+                <span class="phone">+ 22 00 000 123</span>
+            </div>
+            <div class="contact">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span class="mail">super@pozyczka.pl</span>
+            </div>
+        </div>
+        <div class="container">
+            <p class="">Copyright <span>&#169;</span> MNUF 2020</p>
+        </div>
+    </footer>
+</body>
+
+</html>

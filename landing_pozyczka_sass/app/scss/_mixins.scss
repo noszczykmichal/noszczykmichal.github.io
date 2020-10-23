@@ -1,0 +1,39 @@
+@mixin icons-header{
+    margin-top: 10px;
+    font-size: 2rem;
+    float: left;
+    margin-right: 0.8rem;
+}
+
+@mixin stylesForInputs{
+    display: block;
+    height: 2.5rem;
+    width: 100%;
+    margin: 0.75rem 0rem;
+    border-radius: 5px;
+    color: #000000;
+
+}
+
+@mixin styleForTextArea{
+    width: 100%;
+    color: #000000;
+    font-family: $mainFont;
+    border-radius: 5px;
+}
+
+@mixin tableData{
+    border-bottom: 1px solid #808080;
+}
+
+@mixin paragraphWithCounter{
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorCounters;
+    color: $mainFontColor;
+    font-size: 1.25rem;
+}
