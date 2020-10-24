@@ -262,12 +262,26 @@ footer{
         }
     }
 
+    .formSection{
+       .container{
+           width: 90%;
+       }
+    }
+
+    .aboutUs{
+        .container{
+            .articles{
+                padding: 1rem 0rem 0rem 0rem;
+            }
+        }
+    }
+
     footer{
         .container{
             display: block;
             text-align: center;
             .contact{
-                width: 100%;
+                width: 90%;
                 padding: 1rem;
             }
         }
