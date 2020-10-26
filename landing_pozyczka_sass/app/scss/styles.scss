@@ -19,7 +19,8 @@ header{
     position: absolute;
     width: 100%;
 
-    .container{     
+    .container{   
+        width: 90%;  
         .main-logo{
             display: inline-block;
             margin-left: 30px;
@@ -56,28 +57,34 @@ header{
 /*-------- Section Form Styles --------*/
 
 .formSection{
+    display: flex;
+    justify-content: center;
     height: 110vh;
+    min-height: 800px;
+    width: 100%;
     padding: 10rem 0rem;
     background-image: url('../img/background.png');
     background-size: cover;
     color: $mainFontColor;
 
     .container{
-        float: right;
-        width: 34rem;
-        padding: 5rem;
-    
+        width: 90%;
+        padding: 2rem 5rem 2rem 0rem;
+
+        .containerForForm{
+            width: 30%;
+            float: right; 
+        }
     }
+}
+
+.yellowFont{
+    color: $yellowIcons;
 }
 
 form{
     padding: 1rem;
     background-color: $formBackgroundColor;
-    
-
-    .yellowFont{
-        color: $yellowIcons;
-    }
 
     input:not([type="submit"]){
         @include stylesForInputs;
@@ -99,13 +106,15 @@ form{
 /*-------- Section About Styles--------*/
 
 .aboutUs{
+    width: 100%;
     padding: 5rem 0rem;
     background-color: $backgroundColorSectionAbout;
     color: $sectionAboutFontColor;
 
     .counters{
-        width: 100%;
+        width: 90%;
         display: flex;
+        margin: 0 auto;
         margin-bottom: 4rem;
 
         .experience, .clients{
@@ -125,8 +134,9 @@ form{
     }
 
     .container{
-        width: 100%;
-        padding: 3rem 3rem;
+        width: 90%;
+        margin: 0 auto;
+        padding: 3rem 0rem;
         display: flex;
         justify-content: space-between;
 
@@ -200,14 +210,34 @@ footer{
 
 /*-------- Responsive css --------*/
 
+@media(min-width: 1200px){
+
+    .container{
+        .quotes{
+            max-width: 360px;
+        }
+    }
+}
+
+@media(max-width: 1200px){
+    .formSection{ 
+        .container{
+            .containerForForm{
+                width: 300px;
+            }
+        }
+    }
+
+}
+
 @media(max-width: 992px){
-    .aboutUs{
+      .aboutUs{
         .container{
             padding: 3rem 3rem;
             display: flex;
             flex-wrap: wrap;
             .articles{
-                width: 45%;
+                width: 50%;
                 
             }
         }
@@ -215,10 +245,18 @@ footer{
 }
 
 @media(max-width: 768px){
+    
     .formSection{
         .container{
            float: none;
-           margin: 0 auto; 
+           margin: 0 auto;
+           margin-bottom: 3rem; 
+           display: flex;
+           padding: 2rem 0rem;
+           justify-content: center;
+           .containerForForm{
+               width: 70%;
+           }
         }
     }
 
@@ -265,11 +303,21 @@ footer{
     .formSection{
        .container{
            width: 90%;
+
+           .containerForForm{
+               width: 90%;
+           }
        }
     }
 
     .aboutUs{
         .container{
+            padding: 0rem;
+            display: flex;
+            justify-content: center;
+            .quotes{
+                max-width: 350px;
+            }
             .articles{
                 padding: 1rem 0rem 0rem 0rem;
             }

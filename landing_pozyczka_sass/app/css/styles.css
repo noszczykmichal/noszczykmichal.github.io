@@ -13,51 +13,60 @@ body {
 header {
   position: absolute;
   width: 100%; }
-  header .container .main-logo {
-    display: inline-block;
-    margin-left: 30px; }
-    header .container .main-logo i {
-      color: #ecd407;
-      margin-top: 10px;
-      font-size: 2rem;
-      float: left;
-      margin-right: 0.8rem; }
-    header .container .main-logo p {
-      margin-top: 5px;
+  header .container {
+    width: 90%; }
+    header .container .main-logo {
       display: inline-block;
-      font-size: 2rem;
-      font-weight: 700; }
-  header .container .header-contact {
-    width: 300px;
-    float: right; }
-    header .container .header-contact i {
-      margin-top: 10px;
-      font-size: 2rem;
-      float: left;
-      margin-right: 0.8rem;
-      transform: rotate(100deg); }
-    header .container .header-contact span {
-      display: block;
-      margin-top: 5px;
-      font: 0.8 rem; }
+      margin-left: 30px; }
+      header .container .main-logo i {
+        color: #ecd407;
+        margin-top: 10px;
+        font-size: 2rem;
+        float: left;
+        margin-right: 0.8rem; }
+      header .container .main-logo p {
+        margin-top: 5px;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 700; }
+    header .container .header-contact {
+      width: 300px;
+      float: right; }
+      header .container .header-contact i {
+        margin-top: 10px;
+        font-size: 2rem;
+        float: left;
+        margin-right: 0.8rem;
+        transform: rotate(100deg); }
+      header .container .header-contact span {
+        display: block;
+        margin-top: 5px;
+        font: 0.8 rem; }
 
 /*-------- Section Form Styles --------*/
 .formSection {
+  display: flex;
+  justify-content: center;
   height: 110vh;
+  min-height: 800px;
+  width: 100%;
   padding: 10rem 0rem;
   background-image: url("../img/background.png");
   background-size: cover;
   color: #f5f5f5; }
   .formSection .container {
-    float: right;
-    width: 34rem;
-    padding: 5rem; }
+    width: 90%;
+    padding: 2rem 5rem 2rem 0rem; }
+    .formSection .container .containerForForm {
+      width: 30%;
+      float: right; }
+
+.yellowFont {
+  color: #ecd407; }
 
 form {
   padding: 1rem;
   background-color: #001d8a; }
-  form .yellowFont {
-    color: #ecd407; }
   form input:not([type="submit"]) {
     display: block;
     height: 2.5rem;
@@ -83,24 +92,18 @@ form {
 
 /*-------- Section About Styles--------*/
 .aboutUs {
+  width: 100%;
   padding: 5rem 0rem;
   background-color: #eaecf0;
   color: #000000; }
   .aboutUs .counters {
-    width: 100%;
+    width: 90%;
     display: flex;
-<<<<<<< HEAD
-    justify-content: center;
-    margin-bottom: 4rem; }
-    .aboutUs .counters .experience, .aboutUs .counters .clients {
-      display: inline-block;
-      padding: 0rem 10rem;
-=======
+    margin: 0 auto;
     margin-bottom: 4rem; }
     .aboutUs .counters .experience, .aboutUs .counters .clients {
       display: inline-block;
       margin: 0 auto;
->>>>>>> beta
       text-align: center; }
     .aboutUs .counters p.counterCount {
       display: flex;
@@ -116,15 +119,9 @@ form {
     .aboutUs .counters .experienceP, .aboutUs .counters .clientsP {
       font-size: 1.5rem; }
   .aboutUs .container {
-    width: 100%;
-<<<<<<< HEAD
-    padding: 3rem 3rem; }
-    .aboutUs .container .articles {
-      display: inline-block;
-      width: 33%;
-      padding: 0rem 3rem; }
-=======
-    padding: 3rem 3rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 3rem 0rem;
     display: flex;
     justify-content: space-between; }
     .aboutUs .container .quotes {
@@ -133,7 +130,6 @@ form {
       display: inline-block;
       width: 33%;
       padding: 0rem 2rem; }
->>>>>>> beta
 
 .articles table {
   width: 100%;
@@ -171,22 +167,34 @@ footer {
       width: 45%;
       display: inline-block;
       text-align: center; }
-<<<<<<< HEAD
-=======
 
 /*-------- Responsive css --------*/
+@media (min-width: 1200px) {
+  .container .quotes {
+    max-width: 360px; } }
+
+@media (max-width: 1200px) {
+  .formSection .container .containerForForm {
+    width: 300px; } }
+
 @media (max-width: 992px) {
   .aboutUs .container {
     padding: 3rem 3rem;
     display: flex;
     flex-wrap: wrap; }
     .aboutUs .container .articles {
-      width: 45%; } }
+      width: 50%; } }
 
 @media (max-width: 768px) {
   .formSection .container {
     float: none;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    display: flex;
+    padding: 2rem 0rem;
+    justify-content: center; }
+    .formSection .container .containerForForm {
+      width: 70%; }
   .aboutUs .counters {
     display: block; }
     .aboutUs .counters .experience {
@@ -209,12 +217,19 @@ footer {
     margin-left: 30px; }
   .formSection .container {
     width: 90%; }
-  .aboutUs .container .articles {
-    padding: 1rem 0rem 0rem 0rem; }
+    .formSection .container .containerForForm {
+      width: 90%; }
+  .aboutUs .container {
+    padding: 0rem;
+    display: flex;
+    justify-content: center; }
+    .aboutUs .container .quotes {
+      max-width: 350px; }
+    .aboutUs .container .articles {
+      padding: 1rem 0rem 0rem 0rem; }
   footer .container {
     display: block;
     text-align: center; }
     footer .container .contact {
       width: 90%;
       padding: 1rem; } }
->>>>>>> beta
