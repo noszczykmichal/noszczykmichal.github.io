@@ -4,8 +4,20 @@ body{
 
 /* styles for dynamic change of placeholder's text color after form validation */
 
-.invalidValue::-webkit-input-placeholder{
-    color: red;
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.invalidValueChrome::placeholder{
+    color: #ff0000;
+    opacity: 1;
+}
+
+/* Internet Explorer 10-11 */
+.invalidValueIE10_11:-ms-input-placeholder{
+    color: #ff0000;
+}
+
+/* Microsoft Edge */
+.invalidValueEdge::-ms-input-placeholder{
+    color: #ff0000;
 }
 
 /*-------- Section Form --------*/
@@ -120,3 +132,7 @@ footer{
     color: #fff;
 }
 
+.mailAndPhone{
+    text-decoration: none;
+    color: #fff;
+}
