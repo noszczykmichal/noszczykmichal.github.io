@@ -37,3 +37,8 @@
     color: $mainFontColor;
     font-size: 1.25rem;
 }
+
+@mixin colorAndTextLinks{
+    color: #fff;
+    text-decoration: none;
+}

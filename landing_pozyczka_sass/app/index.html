@@ -28,7 +28,7 @@
             <div class="header-contact">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span class="call">Zadzwoń do nas</span>
-                <span class="phone">+ 22 00 000 123</span>
+                <a class="phone" href="tel:+2200000123">+ 22 00 000 123</a>
             </div>
         </div>
     </header>
@@ -38,11 +38,11 @@
             <div class="containerForForm">
                 <h2>Zostaw <span class="yellowFont">sprawy finansowe</span> nam <span class="yellowFont">skup się na
                     swoim biznesie</span></h2>
-                <form action="" autocomplete="on">
+                <form action="https://formspree.io/f/mdopgqkq" method="POST" autocomplete="on">
                     <h2>Zostaw nam swoje dane, a na pewno oddzwonimy</h2>
                     <input type="text" name="fullName" placeholder="Imię i nazwisko" required>
                     <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="tel" placeholder="Telefon np: 600-800-900" required>
+                    <input type="tel" name="tel" placeholder="Telefon np. 600-800-900" pattern="[4-9]{1}[0-9]{2}-[0-9]{3}-[0-9]{3}" required>
                     <textarea name="message" cols="30" rows="5" placeholder="Wiadomość"></textarea>
                     <input type="submit" value="Wyślij zgłoszenie">
                 </form>
@@ -114,17 +114,22 @@
         <div class="container">
             <div class="contact">
                 <i class="fa fa-phone-alt" aria-hidden="true"></i>
-                <span class="phone">+ 22 00 000 123</span>
+                <a class="mailAndPhone" href="tel:+2200000123">+ 22 00 000 123</a>
             </div>
             <div class="contact">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span class="mail">super@pozyczka.pl</span>
+                <a class="mailAndPhone" href="mailto:super@pozyczka.pl">super@pozyczka.pl</a>
             </div>
         </div>
         <div class="container">
             <p class="">Copyright <span>&#169;</span> MNUF 2020</p>
         </div>
     </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <!-- main.js -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
-/* Font, color of fonts*/
-/* Background color sections and elements*/
+/* Font-families, color of fonts*/
+/* Background color for sections and elements*/
 /*-------- General Styles --------*/
 * {
   box-sizing: border-box; }
@@ -8,6 +8,20 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   color: #f5f5f5; }
+
+/* styles for dynamic change of placeholder's text color after form validation */
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.invalidValueChrome::placeholder {
+  color: #ff0000;
+  opacity: 1; }
+
+/* Internet Explorer 10-11 */
+.invalidValueIE10_11:-ms-input-placeholder {
+  color: #ff0000; }
+
+/* Microsoft Edge */
+.invalidValueEdge::-ms-input-placeholder {
+  color: #ff0000; }
 
 /*-------- Main Header Styles --------*/
 header {
@@ -38,10 +52,15 @@ header {
         float: left;
         margin-right: 0.8rem;
         transform: rotate(100deg); }
-      header .container .header-contact span {
+      header .container .header-contact .call {
         display: block;
         margin-top: 5px;
         font: 0.8 rem; }
+      header .container .header-contact .phone {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        margin-top: 5px; }
 
 /*-------- Section Form Styles --------*/
 .formSection {
@@ -90,7 +109,7 @@ form {
     font-weight: 700;
     border-color: #ecd407; }
 
-/*-------- Section About Styles--------*/
+/*-------- Section About Us Styles--------*/
 .aboutUs {
   width: 100%;
   padding: 5rem 0rem;
@@ -149,6 +168,7 @@ form {
   line-height: 1.75rem; }
 
 .articles a {
+  color: #fff;
   text-decoration: none;
   color: #007BFF; }
 
@@ -162,6 +182,9 @@ footer {
     justify-content: center; }
     footer .container i {
       color: #ecd407; }
+    footer .container .mailAndPhone {
+      color: #fff;
+      text-decoration: none; }
     footer .container .contact {
       padding: 2.5rem;
       width: 45%;

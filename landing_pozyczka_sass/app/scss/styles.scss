@@ -13,6 +13,24 @@ body{
     color: $mainFontColor;
 }
 
+/* styles for dynamic change of placeholder's text color after form validation */
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.invalidValueChrome::placeholder{
+    color: $invalidValueInput;
+    opacity: 1;
+}
+
+/* Internet Explorer 10-11 */
+.invalidValueIE10_11:-ms-input-placeholder{
+    color: $invalidValueInput;
+}
+
+/* Microsoft Edge */
+.invalidValueEdge::-ms-input-placeholder{
+    color: $invalidValueInput;
+}
+
 /*-------- Main Header Styles --------*/
 
 header{
@@ -45,10 +63,15 @@ header{
                 @include icons-header;
                 transform: rotate(100deg);
             }
-            span{
+            .call{
                 display: block;
                 margin-top: 5px; 
                 font: 0.8 rem;
+            }
+            .phone{
+                @include colorAndTextLinks;
+                display: block;
+                margin-top: 5px 
             }
         }
     }
@@ -103,7 +126,7 @@ form{
     }
 }
 
-/*-------- Section About Styles--------*/
+/*-------- Section About Us Styles--------*/
 
 .aboutUs{
     width: 100%;
@@ -179,8 +202,8 @@ form{
     }
 
     a{
-        text-decoration: none;
-        color: $colorLinks;
+        @include colorAndTextLinks;
+        color: $colorLinksSAbout;
     }
 }
 
@@ -197,6 +220,10 @@ footer{
 
         i{
             color: $yellowIcons;
+        }
+
+        .mailAndPhone{
+            @include colorAndTextLinks;
         }
      
         .contact{
