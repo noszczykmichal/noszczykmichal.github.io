@@ -478,6 +478,10 @@ span:nth-child(4){
         opacity: 0.8;
     }
 
+    .section .paragDescription{
+        margin: 15px 30px 15px 30px;
+    }
+
     .contact form input:not([type="submit"]){
         flex-basis: 100%;
     }
