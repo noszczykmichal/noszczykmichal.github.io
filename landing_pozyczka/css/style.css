@@ -112,8 +112,15 @@ caption{
     caption-side: top;
 }
 
+table{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+}
+
 .quotes tr{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #16171a;
 }
 
 .quotes td{
@@ -135,4 +142,28 @@ footer{
 .mailAndPhone{
     text-decoration: none;
     color: #fff;
+}
+
+/*-------- Error Handling --------*/
+
+.backdrop{
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    height: 70%;
+    width: 95%;
+    background-color: rgba(22, 23, 26, 0.99);
+    justify-content: center;
+    text-align: center;
+} 
+
+.backdropInfo{
+    align-self: center;
+    vertical-align: middle; 
+    color: #fff;
+    z-index: 500;
+}
+
+.backdropVisible{
+    display: flex;
 }
