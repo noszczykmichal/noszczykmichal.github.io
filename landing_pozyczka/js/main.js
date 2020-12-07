@@ -105,16 +105,58 @@ $(function () {
 
         //error handling
 
-        if (newError==429) {
+        if (newError == 429) {
             $('.backdrop').addClass('backdropVisible');
-            $('.backdropInfo').text('Przepraszamy za utrudnienia, wyczerpaliśmy limit zapytań na serwer.');
-        }else if(newError!==null && newError!==429){
+
+            function convertMiliseconds() {
+                //creating a date object with time set to the renewal of the api subscription
+                let subscripDate = new Date();
+                subscripDate.setDate(10)
+                subscripDate.setHours(1)
+                subscripDate.setMinutes(0);
+                subscripDate.setSeconds(0);
+                subscripDate.setMilliseconds(0);
+
+                //actual date
+                let actDate = new Date();
+                //counting how many milliseconds are there left to renewal of subscription
+                let milliseconds = subscripDate - actDate;
+
+                let days, hours, minutes, seconds, total_hours, total_minutes, total_seconds;
+
+                //counting of total number of seconds that left till subscription renewal 
+                total_seconds = parseInt(Math.floor(milliseconds / 1000));
+                //minutes that left
+                total_minutes = parseInt(Math.floor(total_seconds / 60));
+                //hours that left
+                total_hours = parseInt(Math.floor(total_minutes / 60));
+                //days that left
+                days = parseInt(Math.floor(total_hours / 24));
+
+
+                seconds = parseInt(total_seconds % 60);
+                minutes = parseInt(total_minutes % 60);
+                hours = parseInt(total_hours % 24);
+
+                let newText = `Aktualne kursy zostaną pobrane za: </br>
+                ${days} d. ${hours} godz. ${minutes} min. i ${seconds} sek.`;
+
+                $('.backdropInfo').text('Przepraszamy za utrudnienia, wyczerpaliśmy limit zapytań na serwer.');
+
+                $('.backdropDisplay').html(newText);
+            }
+
+            setInterval(convertMiliseconds, 1000)
+
+
+
+        } else if (newError !== null && newError !== 429) {
             $('.backdrop').addClass('backdropVisible');
             $('.backdropInfo').text('Przepraszamy, coś poszło nie tak...')
         }
     }
 
-    setInterval(requestToApi, 10000);
+    setInterval(requestToApi, 6000);
 
 })
 
