@@ -39,8 +39,10 @@ $(function () {
         }
     });
 
+
     //options for the request to the api
     let newError = null;
+    let responseSuccess=null;
 
     const settings = {
         'async': true,
@@ -53,6 +55,7 @@ $(function () {
         },
         'error': function (error) {
             newError = error.status;
+            // console.log('error: ', error)
         }
     }
 
@@ -65,6 +68,14 @@ $(function () {
             const usd = response.result['usdpln:cur'];
             const chf = response.result['chfpln:cur'];
             const gbp = response.result['gbppln:cur'];
+            
+            if(response){
+                responseSuccess= true;
+            }
+            
+
+            
+
 
             //an array created from the response for a given currency
 
@@ -103,7 +114,12 @@ $(function () {
 
         });
 
-        //error handling
+        if(newError!==null || responseSuccess!==null){
+
+            $('.preloader').addClass('preloaderDispNone');
+        }
+
+        //error handling and showing to the user messages depending on the context and error status
 
         if (newError == 429) {
             $('.backdrop').addClass('backdropVisible');
@@ -112,11 +128,11 @@ $(function () {
                 //creating a date object with time set to the renewal of the api subscription
                 let subscripDate = new Date();
                 subscripDate.setDate(10)
-                subscripDate.setHours(1)
-                subscripDate.setMinutes(0);
+                subscripDate.setHours(20) //subscription renews every tenth day of the month on 19:53 UTC which means according to Poland's local time zone is 20:53
+                subscripDate.setMinutes(53);
                 subscripDate.setSeconds(0);
                 subscripDate.setMilliseconds(0);
-
+                
                 //actual date
                 let actDate = new Date();
                 //counting how many milliseconds are there left to renewal of subscription
@@ -148,7 +164,7 @@ $(function () {
 
             setInterval(convertMiliseconds, 1000)
 
-
+            //in case error status isn't 429(Too many request), the default message should appear
 
         } else if (newError !== null && newError !== 429) {
             $('.backdrop').addClass('backdropVisible');
@@ -156,7 +172,7 @@ $(function () {
         }
     }
 
-    setInterval(requestToApi, 6000);
+    setInterval(requestToApi, 8000);
 
 })
 
