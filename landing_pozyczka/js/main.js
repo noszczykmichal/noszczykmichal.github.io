@@ -16,8 +16,6 @@ $(function () {
         })
     })
 
-
-
     //launching of the counters bound with a scroll event + code for the counters animation
 
     $(document).bind('scroll', function (event) {
@@ -42,7 +40,6 @@ $(function () {
 
     //options for the request to the api
     let newError = null;
-    let responseSuccess=null;
 
     const settings = {
         'async': true,
@@ -61,8 +58,6 @@ $(function () {
 
     function requestToApi() {
 
-
-
         $.ajax(settings).done(function (response) {
             const eur = response.result['eurpln:cur'];
             const usd = response.result['usdpln:cur'];
@@ -70,13 +65,9 @@ $(function () {
             const gbp = response.result['gbppln:cur'];
             
             if(response){
-                responseSuccess= true;
+                $('.preloader').addClass('preloaderDispNone');
             }
             
-
-            
-
-
             //an array created from the response for a given currency
 
             const currencies = [eur, usd, chf, gbp];
@@ -113,11 +104,6 @@ $(function () {
             })
 
         });
-
-        if(newError!==null || responseSuccess!==null){
-
-            $('.preloader').addClass('preloaderDispNone');
-        }
 
         //error handling and showing to the user messages depending on the context and error status
 
@@ -167,6 +153,7 @@ $(function () {
             //in case error status isn't 429(Too many request), the default message should appear
 
         } else if (newError !== null && newError !== 429) {
+            $('.preloader').addClass('preloaderDispNone');
             $('.backdrop').addClass('backdropVisible');
             $('.backdropInfo').text('Przepraszamy, coś poszło nie tak...')
         }

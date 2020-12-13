@@ -89,7 +89,7 @@ form input[type="submit"]{
 
 .counter-count{
     font-size: 1.2em;
-    background-color: #001d8a;;
+    background-color: #001d8a;
     border-radius: 50%;
     position: relative;
     color: #ffffff;
@@ -113,7 +113,6 @@ caption{
 }
 
 table{
-    position: relative;
     height: 100%;
     width: 100%;
     z-index: 200;
@@ -135,33 +134,32 @@ table{
 
 .preloader{
     display: flex;
-    top: 15px;
-    left: 0;
-    justify-content: center;
     position: absolute;
+    justify-content: center;
     align-items: center;
+    top: 35px;
+    left: 0;
     height: 80%;
     width: 100%;
     background-color: rgba(234, 236, 240, 0.8);
     z-index: 300;
   }
-  
+
   .dots{
-    position: relative;
     height: 20px;
     width: 20px;
     margin: 10px;
-    top: 50px;
     background-color: #13326c;
     border-radius: 50%;
     animation-name: preloader;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    transform: translateY(50px);
   }
 
   .preloaderDispNone{
-      display: none;
+    display: none;
   }
   
   .dots:nth-child(1){
@@ -178,42 +176,18 @@ table{
   }
   
   @keyframes preloader{
+    0%{
+      transform: translateY(50px);
+      background-color: #13326c;
+    }
+
     50%{
+      transform: translateY(-50px);
       background-color: #ff7900;
     }
-  
-     0%{
-      top: 50px;
-    }
-    10%{
-      top: 40px;
-    }
-    20%{
-      top: 30px; 
-    }
-    30%{
-      top: 20px;
-    }
-    40%{
-      top: 10px;
-    }
-    50%{
-      bottom: 0px;
-    }
-    60%{
-      bottom: 10px;
-    }
-    70%{
-      bottom: 20px;
-    }
-    80%{
-      bottom: 30px;
-    }
-    90%{
-      bottom: 40px;
-    }
     100%{
-      bottom: 50px;
+      transform: translateY(50px);
+      background-color: #13326c;
     }
   }
 
@@ -244,8 +218,6 @@ table{
 .backdropVisible{
     display: block;  
 }
-
-
 
 /*-------- Footer --------*/
 
