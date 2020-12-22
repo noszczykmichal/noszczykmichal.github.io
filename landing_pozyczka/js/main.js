@@ -104,6 +104,7 @@ $(function () {
             })
 
         });
+    }        
 
         //error handling and showing to the user messages depending on the context and error status
 
@@ -111,6 +112,9 @@ $(function () {
             $('.backdrop').addClass('backdropVisible');
 
             function convertMiliseconds() {
+                //current date
+                let currentDate = new Date();
+
                 //creating a date object with time set to the renewal of the api subscription
                 let subscripDate = new Date();
                 subscripDate.setDate(10)
@@ -119,14 +123,17 @@ $(function () {
                 subscripDate.setSeconds(0);
                 subscripDate.setMilliseconds(0);
                 
-                //actual date
-                let actDate = new Date();
-                //counting how many milliseconds are there left to renewal of subscription
-                let milliseconds = subscripDate - actDate;
+                 // checking if we have not run out of quotes in the present month; if present day of month is after tenth of month and we get error status '429' it means we run out of quotes for the present month and next quotes will be available on tenth day of the next month at 19:53 UTC; 
+                if(currentDate.getDate()>=10){
+                subscripDate.setMonth(subscripDate.getMonth()+1);//according to above, for the counter to display the proper time to subscription renewal we need to add 1 month to the present date
+                }
+                
+                //calculating how many milliseconds are there left to the renewal of subscription
+                let milliseconds = subscripDate - currentDate;
 
                 let days, hours, minutes, seconds, total_hours, total_minutes, total_seconds;
 
-                //counting of total number of seconds that left till subscription renewal 
+                //calculating the total number of seconds that left to the renewal of subscription/// tutaj skończyłem zrobić tylko commit + dorzucić poprawioną wersję na GH Pages
                 total_seconds = parseInt(Math.floor(milliseconds / 1000));
                 //minutes that left
                 total_minutes = parseInt(Math.floor(total_seconds / 60));
@@ -157,7 +164,7 @@ $(function () {
             $('.backdrop').addClass('backdropVisible');
             $('.backdropInfo').text('Przepraszamy, coś poszło nie tak...')
         }
-    }
+    
 
     setInterval(requestToApi, 8000);
 
