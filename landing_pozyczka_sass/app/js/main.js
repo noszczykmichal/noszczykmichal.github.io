@@ -102,68 +102,67 @@ $(function () {
             })
 
         });
-    }
 
-    //error handling and showing to the user messages depending on the context and error status
+        //error handling and showing to the user messages depending on the context and error status
 
-    if (newError == 429) {//Too many requests
-        $('.spinner').addClass('spinnerDispNone');
-        $('.tableContents').addClass('tableContentsShow');
-        $('.backdrop').addClass('backdropVisible');
+        if (newError == 429) {//Too many requests
+            $('.spinner').addClass('spinnerDispNone');
+            $('.tableContents').addClass('tableContentsShow');
+            $('.backdrop').addClass('backdropVisible');
 
-        function convertMilliseconds() {
-            //current date
-            const currentDate = new Date();
+            function convertMilliseconds() {
+                //current date
+                const currentDate = new Date();
 
-            //creating a date object with time set to the renewal of the api subscription
-            const subscripDate = new Date();
-            subscripDate.setDate(10)
-            subscripDate.setHours(20) //subscription renews every tenth day of the month on 19:53 UTC which means according to Poland's local time zone is 20:53
-            subscripDate.setMinutes(53);
-            subscripDate.setSeconds(0);
-            subscripDate.setMilliseconds(0);
+                //creating a date object with time set to the renewal of the api subscription
+                const subscripDate = new Date();
+                subscripDate.setDate(10)
+                subscripDate.setHours(20) //subscription renews every tenth day of the month on 19:53 UTC which means according to Poland's local time zone is 20:53
+                subscripDate.setMinutes(53);
+                subscripDate.setSeconds(0);
+                subscripDate.setMilliseconds(0);
 
-            // checking if we have not run out of quotes in the present month; if present day of month is after tenth of month and we get error status '429' it means we run out of quotes for the present month and next quotes will be available on tenth day of the next month at 19:53 UTC; 
-            if(currentDate.getDate()>=10){
-                subscripDate.setMonth(subscripDate.getMonth()+1);//according to above, for the counter to display the proper time to subscription renewal we need to add 1 month to the present date
-            }
-            
-            //counting how many milliseconds are there left to renewal of subscription
-            const milliseconds = subscripDate - currentDate;
+                // checking if we have not run out of quotes in the present month; if present day of month is after tenth of month and we get error status '429' it means we run out of quotes for the present month and next quotes will be available on tenth day of the next month at 19:53 UTC; 
+                if (currentDate.getDate() >= 10) {
+                    subscripDate.setMonth(subscripDate.getMonth() + 1);//according to above, for the counter to display the proper time to subscription renewal we need to add 1 month to the present date
+                }
 
-            let days, hours, minutes, seconds, total_hours, total_minutes, total_seconds;
+                //counting how many milliseconds are there left to renewal of subscription
+                const milliseconds = subscripDate - currentDate;
 
-            //calculating the total amount of seconds that have left till subscription renewal
-            total_seconds = parseInt(Math.floor(milliseconds / 1000));
-            //minutes that left
-            total_minutes = parseInt(Math.floor(total_seconds / 60));
-            //hours that left
-            total_hours = parseInt(Math.floor(total_minutes / 60));
-            //days that left
-            days = parseInt(Math.floor(total_hours / 24));
+                let days, hours, minutes, seconds, total_hours, total_minutes, total_seconds;
 
-            seconds = parseInt(total_seconds % 60);
-            minutes = parseInt(total_minutes % 60);
-            hours = parseInt(total_hours % 24);
+                //calculating the total amount of seconds that have left till subscription renewal
+                total_seconds = parseInt(Math.floor(milliseconds / 1000));
+                //minutes that left
+                total_minutes = parseInt(Math.floor(total_seconds / 60));
+                //hours that left
+                total_hours = parseInt(Math.floor(total_minutes / 60));
+                //days that left
+                days = parseInt(Math.floor(total_hours / 24));
 
-            let newText = `Aktualne kursy zostaną pobrane za: </br>
+                seconds = parseInt(total_seconds % 60);
+                minutes = parseInt(total_minutes % 60);
+                hours = parseInt(total_hours % 24);
+
+                let newText = `Aktualne kursy zostaną pobrane za: </br>
                 ${days} d. ${hours} godz. ${minutes} min. i ${seconds} sek.`;
 
-            $('.backdropInfo').text('Przepraszamy za utrudnienia, wyczerpaliśmy limit zapytań na serwer.');
+                $('.backdropInfo').text('Przepraszamy za utrudnienia, wyczerpaliśmy limit zapytań na serwer.');
 
-            $('.backdropDisplay').html(newText);
+                $('.backdropDisplay').html(newText);
+            }
+
+            setInterval(convertMilliseconds, 1000)
+
+            //in case error status isn't 429(Too many request), the default message should appear
+        } else if (newError !== null && newError !== 429) {
+            $('.spinner').addClass('spinnerDispNone');
+            $('.tableContents').addClass('tableContentsShow');
+            $('.backdrop').addClass('backdropVisible');
+            $('.backdropInfo').text('Przepraszamy, coś poszło nie tak...')
         }
-
-        setInterval(convertMilliseconds, 1000)
-
-        //in case error status isn't 429(Too many request), the default message should appear
-    } else if (newError !== null && newError !== 429) {
-        $('.spinner').addClass('spinnerDispNone');
-        $('.tableContents').addClass('tableContentsShow');
-        $('.backdrop').addClass('backdropVisible');
-        $('.backdropInfo').text('Przepraszamy, coś poszło nie tak...')
     }
-
 
 
     setInterval(requestToApi, 8000);
