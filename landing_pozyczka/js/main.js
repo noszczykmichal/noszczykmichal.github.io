@@ -104,11 +104,12 @@ $(function () {
             })
 
         });
-    }        
+            
 
         //error handling and showing to the user messages depending on the context and error status
 
         if (newError == 429) {
+            $('.preloader').addClass('preloaderDispNone');
             $('.backdrop').addClass('backdropVisible');
 
             function convertMiliseconds() {
@@ -133,7 +134,7 @@ $(function () {
 
                 let days, hours, minutes, seconds, total_hours, total_minutes, total_seconds;
 
-                //calculating the total number of seconds that left to the renewal of subscription/// tutaj skończyłem zrobić tylko commit + dorzucić poprawioną wersję na GH Pages
+                //calculating the total number of seconds that left to the renewal of subscription
                 total_seconds = parseInt(Math.floor(milliseconds / 1000));
                 //minutes that left
                 total_minutes = parseInt(Math.floor(total_seconds / 60));
@@ -164,7 +165,7 @@ $(function () {
             $('.backdrop').addClass('backdropVisible');
             $('.backdropInfo').text('Przepraszamy, coś poszło nie tak...')
         }
-    
+    }
 
     setInterval(requestToApi, 8000);
 
