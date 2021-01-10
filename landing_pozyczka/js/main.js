@@ -125,7 +125,7 @@ $(function () {
                 subscripDate.setMilliseconds(0);
                 
                  // checking if we have not run out of quotes in the present month; if present day of month is after tenth of month and we get error status '429' it means we run out of quotes for the present month and next quotes will be available on tenth day of the next month at 19:53 UTC; 
-                if(currentDate.getDate()>=10){
+                if(currentDate.getDate()>10 || (currentDate.getDate()==10 && subscripDate-currentDate<0)){
                 subscripDate.setMonth(subscripDate.getMonth()+1);//according to above, for the counter to display the proper time to subscription renewal we need to add 1 month to the present date
                 }
                 
