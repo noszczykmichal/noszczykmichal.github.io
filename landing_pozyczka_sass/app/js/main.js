@@ -54,10 +54,10 @@ $(function () {
     function requestToApi() {
 
         $.ajax(settings).done(function (response) {
-            const eur = response.result['eurpln:cur'];
-            const usd = response.result['usdpln:cur'];
-            const chf = response.result['chfpln:cur'];
-            const gbp = response.result['gbppln:cur'];
+            const eur = response.result['EURPLN:cur'];
+            const usd = response.result['USDPLN:cur'];
+            const chf = response.result['CHFPLN:cur'];
+            const gbp = response.result['GBPPLN:cur'];
 
             //hiding of the spinner on getting the response
 
