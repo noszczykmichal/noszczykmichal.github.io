@@ -2,14 +2,17 @@
     box-sizing: border-box;
 }
 
-.main{
+body{
     margin: 0;
+    line-height: 1;
     background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    height: 100vh;
 }
 
 .container{
     position: relative;
     width:600px;
+    height:100vh;
     background-color: rgb(14, 71, 145);
     padding: 2px 20px 15px 25px;
     color: rgb(192, 192, 192); 
@@ -44,6 +47,13 @@ span:nth-child(4){
 /* class for showing and hiding the long text of consent */
 .main .container .agreementLong{
     display: block;
+}
+
+.constentLong{
+    height:100%;
+}
+.formConstentL{
+    height: 100%;
 }
 
 form input, form select, form textarea{
@@ -92,5 +102,9 @@ form input:focus, form select:focus, form textarea:focus{
     .containerUnfilled{
         position: static;
         margin-bottom: 20px;
+    }
+
+    body, .container{
+        height: 100%;
     }
 }
