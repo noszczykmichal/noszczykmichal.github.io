@@ -1,0 +1,152 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.background{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: url("../img/plans-background.jpg") center/cover;
+    -webkit-filter: grayscale(50%);
+            filter: grayscale(50%);
+    z-index: -1;
+}
+
+main{
+    margin: 2rem 0;
+    padding-top: 2rem;
+}
+
+.package{
+    width: 80%;
+    margin: 1rem 0;
+    border: 4px solid #0e4f1f;
+    border-left: none;
+    position: relative;
+}
+
+.package:hover{
+    border-color: #ff5454;
+    -webkit-box-shadow: 2px 2px 4px rgba(0,0,0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0,0,0, 0.5);
+    -webkit-animation: pushUp 1s ease-out forwards;
+            animation: pushUp 1s ease-out forwards;
+}
+
+.package__description{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 2rem;
+}
+
+.package__badge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.25rem;
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: #ff5454;
+    padding: 0.5rem;
+    -webkit-transform: rotate(45deg) translate(5rem, -4rem);
+        -ms-transform: rotate(45deg) translate(5rem, -4rem);
+            transform: rotate(45deg) translate(5rem, -4rem);
+    width: 17rem;
+    text-align: center;
+}
+
+.package__subtitle{
+    color: #979797;
+}
+
+.package__info{
+    padding: 1rem;
+    border: 1px solid #0e4f1f;
+    font-size: 1.25rem;
+    color: #0e4f1f;
+    background-color: #fff;
+} 
+
+.clearfix{
+    clear: both;
+}
+
+#plus{
+    background-color: rgba(213,225,220,0.95);
+    overflow: hidden;
+}
+
+#free{
+    background-color: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-left: 4px solid #0e4f1f;
+    border-right: none;
+    text-align: right;
+}
+
+#free:hover{
+    border-left-color: #ff5454;
+}
+
+#premium{
+    background-color: rgba(14, 79, 31,0.95);
+}
+
+#premium .package__title{
+    color: #fff;
+}
+
+#premium .package__subtitle{
+    color: #bbb;
+}
+
+@media(min-width: 1201px){
+    main{
+        margin: 2rem auto;
+        max-width: 1200px;
+    }
+
+    #free,
+    .package{
+        border: 4px solid #0e4f1f;
+    }
+
+    #free:hover,
+    .package:hover{
+        border-color: #ff5454;
+    }
+  }
+
+  @-webkit-keyframes pushUp{
+    0%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    33%{
+        -webkit-transform: translateY(-1.5rem);
+                transform: translateY(-1.5rem);
+    }
+    100%{
+        -webkit-transform: translateY(-1rem);
+                transform: translateY(-1rem);
+    }
+}
+
+  @keyframes pushUp{
+    0%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    33%{
+        -webkit-transform: translateY(-1.5rem);
+                transform: translateY(-1.5rem);
+    }
+    100%{
+        -webkit-transform: translateY(-1rem);
+                transform: translateY(-1rem);
+    }
+}

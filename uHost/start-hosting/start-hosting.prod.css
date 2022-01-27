@@ -1,0 +1,115 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+main{
+    height: 100%;
+    min-height: 85vh;
+    margin: 2rem 0;
+    padding-top: 2rem;
+}
+
+.signup-title{
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ff5454;
+    padding: 0 1rem;
+}
+
+.signup-form{
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 1rem;
+}
+
+.signup-form label{
+    font-weight: 700;
+}
+
+.signup-form label:not([for="agree-terms"]),
+.signup-form select,
+.signup-form input:not([type="checkbox"]){
+    display: block;
+    width: 100%;
+}
+
+.signup-form input[id*="terms"],
+.signup-form input[id*="terms"] + label{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.signup-form input,
+.signup-form select{
+    border: 1px solid #ccc;
+    padding: 0.2rem 0.5rem;
+    font: inherit;
+}
+
+.signup-form input:focus,
+.signup-form select:focus{
+    outline: none;
+    background: #d8f3df;
+    border-color:#2ddf5c;
+}
+
+.signup-form input[type="checkbox"]{
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 1rem;
+    height: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.signup-form input[type="checkbox"]:checked{
+    background: #2ddf5c;
+    border: 1px solid #0e4f1f;
+}
+
+.button[type="submit"]{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* class for invalid inputs */
+.signup-form input.invalid,
+.signup-form select.invalid{
+    border-color: red;
+    background: #faafac;
+}
+
+.signup-form button[type="submit"]{
+    display: block;
+}
+
+@media(min-width:481px){
+    .signup-form{
+        margin: auto;
+        width: 30rem;
+        -ms-grid-columns: 8rem auto;
+        grid-template-columns: 8rem auto;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .signup-form__checkbox{
+        -ms-grid-column-span: 2;
+        grid-column: span 2;
+        justify-self: flex-end;
+    }
+
+    .button[type="submit"]{
+        -ms-grid-column-span: 2;
+        grid-column: span 2;
+        margin: 0;
+        justify-self: flex-end;
+    }
+}
+
