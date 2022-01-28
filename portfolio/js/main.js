@@ -118,29 +118,28 @@ btn.addEventListener('click', function (event) {
     // I'm getting the values of input 'name' and 'lastname'; and I'm assigning checkbox and text area to variables;
     const name = (document.getElementById('name').value).trim();
     const lastname = (document.getElementById('lastname').value).trim();
-    const checkbox = document.getElementById('agreement');
-    const message = document.getElementById('message');
+    const checkbox = document.getElementById('checkbox__consent');
+    const consentShort=document.querySelector('.consent-short');
 
-    if (name == "" && lastname == "") {
+    if (name === "" && lastname === "") {
         event.preventDefault();
         alert('Proszę wpisać poprawne dane w polu: Imię oraz Nazwisko');
         document.getElementById('name').value = "";
         document.getElementById('lastname').value = "";
-    } else if (lastname == "") {
-        event.preventDefault();
-        alert('Proszę wpisać poprawne dane w polu: Nazwisko');
-        document.getElementById('lastname').value = "";
-    } else if (name == "") {
+    } else if (name === "") {
         event.preventDefault();
         alert('Proszę wpisać poprawne dane w polu: Imię');
         document.getElementById('name').value = "";
-        // I'm checking whether checkbox with agreement is 'checked'
-    } else if (checkbox.checked == false) {
+    } else if (lastname === "") {
         event.preventDefault();
-        message.nextElementSibling.style.color = "red";
-        message.nextElementSibling.style.fontStyle = "italic";
+        alert('Proszę wpisać poprawne dane w polu: Nazwisko');
+        document.getElementById('lastname').value = "";
+        // I'm checking whether checkbox with consent is 'checked'
+    } else if (checkbox.checked === false) {
+        event.preventDefault();
+        consentShort.style.color = "red";
+        consentShort.style.fontStyle = "italic";
     }
-
 })
 
 //switching between full and short consent for processing of personal data
