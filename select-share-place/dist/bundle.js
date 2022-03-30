@@ -2490,7 +2490,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(__webpack_require__(/*! axios */ "./node_modules/axios/index.js"));
 const form = document.querySelector("form");
 const addressInput = document.getElementById("address");
-const google_api_key = "AIzaSyDn0fzPJJQ-BPIVKBUM-ka0z5ilsAMOews";
+const google_api_key = "AIzaSyC9fPejS2xiHABFO9UFtVOMICSy-BLq1xY";
 function searchAddressHandler(event) {
     event.preventDefault();
     const enteredAddress = addressInput.value;
