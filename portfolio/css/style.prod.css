@@ -1,16 +1,9 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 /* -------------- General styles -------------- */
 
 *{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .backdrop{
@@ -23,8 +16,6 @@
     z-index: 300;
     display: none;
     opacity: 0;
-    -webkit-transition: opacity 0.2s linear;
-    -o-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
 }
 
@@ -80,12 +71,8 @@
 
 .main-header{
     height: 70vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     background-image: url('../img/header.jpg');
     background-size: cover;
 }
@@ -121,12 +108,8 @@
     top: 0;
     z-index: 100;
     padding: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .main-nav__icon-container{
@@ -137,8 +120,6 @@
     text-transform: uppercase;
     font-size: 1.5rem;
     text-align: right;
-    -webkit-transition: opacity 0.5s ease-out;
-    -o-transition: opacity 0.5s ease-out;
     transition: opacity 0.5s ease-out;
 }
 
@@ -150,37 +131,20 @@
     position: fixed;
     height: 100vh;
     width: 70vw;
-    background: -webkit-gradient(linear,  left top, left bottom,  from(rgba(83, 112, 143, 0.7)),  to(rgba(80, 68, 18, 0.6)));
-    background: -o-linear-gradient(rgba(83, 112, 143, 0.7),  rgba(80, 68, 18, 0.6));
     background: linear-gradient(rgba(83, 112, 143, 0.7),  rgba(80, 68, 18, 0.6));
     z-index: 400;
     top: 0;
     right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease-out;
-    transition: -webkit-transform 0.5s ease-out;
-    -o-transition: transform 0.5s ease-out;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateX(100%);
     transition: transform 0.5s ease-out;
-    transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .mobile-nav__items{
     margin: 0;
     padding: 0 1rem;
-    background: -webkit-gradient(linear,left top, right bottom,from(rgba(83, 112, 143, 0.7)),  to(rgba(80, 68, 18, 0.6)));
-    background: -o-linear-gradient(left top,rgba(83, 112, 143, 0.7),  rgba(80, 68, 18, 0.6));
     background: linear-gradient(to right bottom,rgba(83, 112, 143, 0.7),  rgba(80, 68, 18, 0.6));
     height: 30vh;
     z-index: 400;
@@ -207,8 +171,7 @@
     height: 30%;
     width: 30%;
     border-radius: 50%;
-    -webkit-filter: grayscale(50%);
-            filter: grayscale(50%);
+    filter: grayscale(50%);
 }
 
 .about-me__text{
@@ -234,11 +197,8 @@
 }
 
 .skills__list{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     padding: 1.5rem 3rem;
 }
 
@@ -256,12 +216,8 @@
 
 .accordion__item{
     height: 4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     border: 0.1rem solid #53708F;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
@@ -297,27 +253,19 @@
 }
 
 .portfolio-wrapper{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .portfolio-item{
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     height: 300px;
     margin: 0;
     position: relative;
 }
 
 .project1{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.5)), to(transparent)), url('../img/portfolio/to-do-list.jpg') center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img/portfolio/to-do-list.jpg') center/cover no-repeat;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img/portfolio/to-do-list.jpg') center/cover no-repeat;
 }
 
@@ -326,26 +274,18 @@
 }
 
 .project3{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.5)), to(transparent)), url('../img/portfolio/freedom_uhost.jpg') center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img/portfolio/freedom_uhost.jpg') center/cover no-repeat;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img/portfolio/freedom_uhost.jpg') center/cover no-repeat;
 }
 
 .project4{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.5)), to(transparent)), url('../img/portfolio/landing_pozyczka.png') center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img/portfolio/landing_pozyczka.png') center/cover no-repeat;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img/portfolio/landing_pozyczka.png') center/cover no-repeat;
 }
 
 .project5{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.5)), to(transparent)), url('../img/portfolio/meter.jpg') center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img/portfolio/meter.jpg') center/cover no-repeat;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img/portfolio/meter.jpg') center/cover no-repeat;
 }
 
 .project6{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.5)), to(transparent)), url('../img//portfolio/hamburger.jpeg') center/cover no-repeat;
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img//portfolio/hamburger.jpeg') center/cover no-repeat;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 100%, transparent), url('../img//portfolio/hamburger.jpeg') center/cover no-repeat;
 }
 
@@ -358,8 +298,6 @@
 	font-size: 16px;
 	color: #fff;
     opacity: 0.8;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
 	transition: all 0.3s;
 	margin: 0;
 }
@@ -375,12 +313,8 @@
 }
 
 .project__icons{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     
 }
 .project__icon{
@@ -416,23 +350,18 @@
 
 .contact form{
     margin: 2.5rem auto 2rem auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .contact form input:not([type="submit"], [type="checkbox"]){
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
 }
 
 .contact form textarea{
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     padding: 1rem;
     height: 100px;
 }
@@ -443,8 +372,7 @@
 }
 
 .contact form input:not([type="checkbox"], [type="submit"]):focus, .contact form textarea:focus{
-    -webkit-box-shadow: 5px 5px 5px #846BAF;
-            box-shadow: 5px 5px 5px #846BAF;
+    box-shadow: 5px 5px 5px #846BAF;
     color: #000;
     outline-color: #53708F;
 }
@@ -484,25 +412,14 @@ footer{
     background-color: #f2f1ed;
     width: 100%;
     padding: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__copy-right{
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
     text-align: center;
     margin-right: 2rem;
 }
@@ -536,9 +453,7 @@ footer{
 }
 
 .open{
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
@@ -560,9 +475,7 @@ footer{
 
 @media(min-width: 480px){
     .main-nav{
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        justify-content: center;
     }
 
     .main-nav__icon-container{
@@ -610,14 +523,11 @@ footer{
 
     .contact form{
         max-width: 700px;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        justify-content: space-between;
     }
 
     .contact form input:not([type="submit"], [type="checkbox"]) {
-        -ms-flex-preferred-size: 48%;
-            flex-basis: 48%;
+        flex-basis: 48%;
     }
 }
 
@@ -627,10 +537,7 @@ footer{
     }
 
     footer{
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        flex-direction: row;
     }
 
     .footer__copy-right{
@@ -639,9 +546,7 @@ footer{
 
     .footer__icons {
         text-align: left;
-        -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-                order: 2;
+        order: 2;
     }
 }
 
@@ -659,8 +564,7 @@ footer{
     }
 
     .portfolio-item{
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
+        flex-basis: 50%;
     }
 }
 
@@ -670,8 +574,7 @@ footer{
     }
 
     .portfolio-item{
-        -ms-flex-preferred-size: 33.33%;
-            flex-basis: 33.33%;
+        flex-basis: 33.33%;
     }
 
     .section .project__description {
